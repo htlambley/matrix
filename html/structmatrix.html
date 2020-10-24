@@ -77,11 +77,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a18eadac56ce3db033e74f5cdbcdd4fc6"><td class="memItemLeft" align="right" valign="top"><a id="a18eadac56ce3db033e74f5cdbcdd4fc6"></a>
 double *&#160;</td><td class="memItemRight" valign="bottom"><b>A</b></td></tr>
 <tr class="separator:a18eadac56ce3db033e74f5cdbcdd4fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1522165deae322bee3ee78a45f031426"><td class="memItemLeft" align="right" valign="top"><a id="a1522165deae322bee3ee78a45f031426"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>m</b></td></tr>
+<tr class="memitem:a1522165deae322bee3ee78a45f031426"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix.html#a1522165deae322bee3ee78a45f031426">m</a></td></tr>
 <tr class="separator:a1522165deae322bee3ee78a45f031426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad22ad2b57a2509620bc587b9f9b5cd58"><td class="memItemLeft" align="right" valign="top"><a id="ad22ad2b57a2509620bc587b9f9b5cd58"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
+<tr class="memitem:ad22ad2b57a2509620bc587b9f9b5cd58"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix.html#ad22ad2b57a2509620bc587b9f9b5cd58">n</a></td></tr>
 <tr class="separator:ad22ad2b57a2509620bc587b9f9b5cd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -89,7 +87,38 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
 <p>This is the main matrix structure used in the library. Most of the the time, you should expect to be given a pointer to a heap-allocated version of this structure.</p>
 <p>The alias <code>matrix_t</code> for this structure is defined for convienience.</p>
 <p>To create a matrix, see the <code>matrix_create</code> function. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1522165deae322bee3ee78a45f031426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1522165deae322bee3ee78a45f031426">&#9670;&nbsp;</a></span>m</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t matrix::m</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The internal array storing the elements of the matrix. Do not access directly: instead use <code>matrix_get</code>. </p>
+
+</div>
+</div>
+<a id="ad22ad2b57a2509620bc587b9f9b5cd58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22ad2b57a2509620bc587b9f9b5cd58">&#9670;&nbsp;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t matrix::n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The number of rows in the matrix. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="matrix_8h_source.html">matrix.h</a></li>
 </ul>
 </div><!-- contents -->

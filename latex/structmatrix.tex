@@ -15,11 +15,9 @@ The main matrix type.
 \mbox{\Hypertarget{structmatrix_a18eadac56ce3db033e74f5cdbcdd4fc6}\label{structmatrix_a18eadac56ce3db033e74f5cdbcdd4fc6}} 
 double $\ast$ {\bfseries A}
 \item 
-\mbox{\Hypertarget{structmatrix_a1522165deae322bee3ee78a45f031426}\label{structmatrix_a1522165deae322bee3ee78a45f031426}} 
-uint64\+\_\+t {\bfseries m}
+uint64\+\_\+t \hyperlink{structmatrix_a1522165deae322bee3ee78a45f031426}{m}
 \item 
-\mbox{\Hypertarget{structmatrix_ad22ad2b57a2509620bc587b9f9b5cd58}\label{structmatrix_ad22ad2b57a2509620bc587b9f9b5cd58}} 
-uint64\+\_\+t {\bfseries n}
+uint64\+\_\+t \hyperlink{structmatrix_ad22ad2b57a2509620bc587b9f9b5cd58}{n}
 \end{DoxyCompactItemize}
 
 
@@ -31,6 +29,21 @@ This is the main matrix structure used in the library. Most of the the time, you
 The alias {\ttfamily matrix\+\_\+t} for this structure is defined for convienience.
 
 To create a matrix, see the {\ttfamily matrix\+\_\+create} function. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmatrix_a1522165deae322bee3ee78a45f031426}\label{structmatrix_a1522165deae322bee3ee78a45f031426}} 
+\index{matrix@{matrix}!m@{m}}
+\index{m@{m}!matrix@{matrix}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily uint64\+\_\+t matrix\+::m}
+
+The internal array storing the elements of the matrix. Do not access directly\+: instead use {\ttfamily matrix\+\_\+get}. \mbox{\Hypertarget{structmatrix_ad22ad2b57a2509620bc587b9f9b5cd58}\label{structmatrix_ad22ad2b57a2509620bc587b9f9b5cd58}} 
+\index{matrix@{matrix}!n@{n}}
+\index{n@{n}!matrix@{matrix}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily uint64\+\_\+t matrix\+::n}
+
+The number of rows in the matrix. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

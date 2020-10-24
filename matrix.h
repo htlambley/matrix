@@ -13,9 +13,11 @@
  * To create a matrix, see the <tt>matrix_create</tt> function. 
  */
 struct matrix {
-    double* A;
-    uint64_t m;
-    uint64_t n;
+    double* A; /** The internal array storing the elements of the matrix.
+                 * Do not access directly: instead use <tt>matrix_get</tt>.
+                 */
+    uint64_t m; /** The number of rows in the matrix. */
+    uint64_t n; /** The number of columns in the matrix */
 };
 
 typedef struct matrix matrix_t;
@@ -33,9 +35,32 @@ struct matrix_qr {
 typedef struct matrix_lup matrix_lup_t;
 typedef struct matrix_qr matrix_qr_t;
 
+
 bool matrix_lower_triangular(matrix_t* A); 
 bool matrix_upper_triangular(matrix_t* A);
 bool matrix_diagonal(matrix_t* A);
+/** 
+ * @brief Solves a lower triangular system of equations using the forward 
+ * substitution algorithm.
+ *
+ * This function can be used to solve systems of linear equations where the
+ * matrix \f$L\f$ is a (square) lower triangular matrix and we wish to find
+ * \f$x\f$ such that \f$Lx = b\f$.
+ *
+ * Takes a lower triangular \f$n \times n\f$ matrix @p A and a vector @b
+ * (represented as a \f$ n \times 1 \f$ matrix) and returns a newly allocated
+ * \f$n \times 1\f$ matrix <tt>x</tt> such that \f$Ax = b\f$.
+ *
+ * Example: suppose we wish to solve the system \f$\begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}x = (1, 0)^T\f$. The following code will use forward substitution to solve this system.
+ * @code
+ * matrix_t* A = matrix_id(2);
+ * matrix_set(A, 1, 0, 2.0);
+ * matrix_t* b = matrix_create(2, 1);
+ * matrix_set(b, 0, 0, 1.0);
+ * matrix_t* x = matrix_fs(A, b);
+ * @endcode
+ * 
+ */
 matrix_t* matrix_fs(matrix_t* A, matrix_t* b);
 matrix_t* matrix_bs(matrix_t* A, matrix_t* b);
 matrix_t* matrix_ge(matrix_t* A, matrix_t* b);

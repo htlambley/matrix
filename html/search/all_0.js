@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['m',['m',['../structmatrix.html#a1522165deae322bee3ee78a45f031426',1,'matrix']]],
   ['matrix',['matrix',['../structmatrix.html',1,'']]],
   ['matrix_5flup',['matrix_lup',['../structmatrix__lup.html',1,'']]],
   ['matrix_5fqr',['matrix_qr',['../structmatrix__qr.html',1,'']]],
