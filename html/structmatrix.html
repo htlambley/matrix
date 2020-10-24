@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: matrix Struct Reference</title>
+<title>Matrix Library: matrix Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Matrix Library
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
   </td>
  </tr>
@@ -65,6 +66,11 @@ $(function() {
 <div class="title">matrix Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The main matrix type.  
+ <a href="structmatrix.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="matrix_8h_source.html">matrix.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -78,7 +84,12 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>m</b></td></tr>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
 <tr class="separator:ad22ad2b57a2509620bc587b9f9b5cd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The main matrix type. </p>
+<p>This is the main matrix structure used in the library. Most of the the time, you should expect to be given a pointer to a heap-allocated version of this structure.</p>
+<p>The alias <code>matrix_t</code> for this structure is defined for convienience.</p>
+<p>To create a matrix, see the <code>matrix_create</code> function. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="matrix_8h_source.html">matrix.h</a></li>
 </ul>
 </div><!-- contents -->

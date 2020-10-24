@@ -1,6 +1,17 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+/**
+ * @brief The main matrix type.
+ *
+ * This is the main matrix structure used in the library. Most of the the time,
+ * you should expect to be given a pointer to a heap-allocated version of this
+ * structure. 
+ *
+ * The alias <tt>matrix_t</tt> for this structure is defined for convienience.
+ * 
+ * To create a matrix, see the <tt>matrix_create</tt> function. 
+ */
 struct matrix {
     double* A;
     uint64_t m;
