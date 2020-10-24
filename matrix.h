@@ -2,6 +2,11 @@
 #include <stdint.h>
 
 /**
+ * @file
+ * @brief Matrix creation, algebra and decompositions.
+ */
+
+/**
  * @brief The main matrix type.
  *
  * This is the main matrix structure used in the library. Most of the the time,
@@ -62,6 +67,13 @@ bool matrix_diagonal(matrix_t* A);
  * 
  */
 matrix_t* matrix_fs(matrix_t* A, matrix_t* b);
+/**
+ * @brief Solves an upper triangular system of equations using the backward
+ * substitution algorithm.
+ * 
+ * This function operates analogously to <tt>matrix_fs</tt>, except this algorithm
+ * can be used to solve systems \f$Ax = b\f$ where \f$A\f$ is upper triangular.
+ */
 matrix_t* matrix_bs(matrix_t* A, matrix_t* b);
 matrix_t* matrix_ge(matrix_t* A, matrix_t* b);
 matrix_t* matrix_gepp(matrix_t* A, matrix_t* b);

@@ -1,0 +1,140 @@
+\hypertarget{matrix_8h}{}\section{matrix.\+h File Reference}
+\label{matrix_8h}\index{matrix.\+h@{matrix.\+h}}
+
+
+Matrix creation, algebra and decompositions.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for matrix.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmatrix}{matrix}
+\begin{DoxyCompactList}\small\item\em The main matrix type. \end{DoxyCompactList}\item 
+struct \hyperlink{structmatrix__lup}{matrix\+\_\+lup}
+\item 
+struct \hyperlink{structmatrix__qr}{matrix\+\_\+qr}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{matrix_8h_abf305b469605fd8253c647f3d277884f}\label{matrix_8h_abf305b469605fd8253c647f3d277884f}} 
+typedef struct \hyperlink{structmatrix}{matrix} {\bfseries matrix\+\_\+t}
+\item 
+\mbox{\Hypertarget{matrix_8h_a99a14e29164fe6714b318d22ec31a979}\label{matrix_8h_a99a14e29164fe6714b318d22ec31a979}} 
+typedef struct \hyperlink{structmatrix__lup}{matrix\+\_\+lup} {\bfseries matrix\+\_\+lup\+\_\+t}
+\item 
+\mbox{\Hypertarget{matrix_8h_a29f267b8861cd86a31882e4cc6f55104}\label{matrix_8h_a29f267b8861cd86a31882e4cc6f55104}} 
+typedef struct \hyperlink{structmatrix__qr}{matrix\+\_\+qr} {\bfseries matrix\+\_\+qr\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{matrix_8h_a3808b63ae2c6a59bc7e5661f4cafd2ed}\label{matrix_8h_a3808b63ae2c6a59bc7e5661f4cafd2ed}} 
+bool {\bfseries matrix\+\_\+lower\+\_\+triangular} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\item 
+\mbox{\Hypertarget{matrix_8h_a8098e0ff84c96b488ad54afba67d13c1}\label{matrix_8h_a8098e0ff84c96b488ad54afba67d13c1}} 
+bool {\bfseries matrix\+\_\+upper\+\_\+triangular} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\item 
+\mbox{\Hypertarget{matrix_8h_ab370408adfaf4f226061b7ea74c45954}\label{matrix_8h_ab370408adfaf4f226061b7ea74c45954}} 
+bool {\bfseries matrix\+\_\+diagonal} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_abad97daa1b997561d7568a06b213d0ff}{matrix\+\_\+fs} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Solves a lower triangular system of equations using the forward substitution algorithm. \end{DoxyCompactList}\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a7105309534bc7d6560bd5de5d739b686}{matrix\+\_\+bs} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Solves an upper triangular system of equations using the backward substitution algorithm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{matrix_8h_afc259d420e7a3d29baca39bf24d96a3a}\label{matrix_8h_afc259d420e7a3d29baca39bf24d96a3a}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+ge} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\item 
+\mbox{\Hypertarget{matrix_8h_a7479f97763962d4ba0735012eafb3c21}\label{matrix_8h_a7479f97763962d4ba0735012eafb3c21}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+gepp} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\item 
+\mbox{\Hypertarget{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}\label{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+create} (uint64\+\_\+t m, uint64\+\_\+t n)
+\item 
+\mbox{\Hypertarget{matrix_8h_a2311a8fbf41ae13364ef827e4a4a3ba4}\label{matrix_8h_a2311a8fbf41ae13364ef827e4a4a3ba4}} 
+double {\bfseries matrix\+\_\+get} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$m, uint64\+\_\+t i, uint64\+\_\+t j)
+\item 
+\mbox{\Hypertarget{matrix_8h_ab35d9079fa743c9f61bed4b06b2954d8}\label{matrix_8h_ab35d9079fa743c9f61bed4b06b2954d8}} 
+void {\bfseries matrix\+\_\+set} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$m, uint64\+\_\+t i, uint64\+\_\+t j, double value)
+\item 
+\mbox{\Hypertarget{matrix_8h_ac1e78a42d62d2ee921d861b2bb932a7c}\label{matrix_8h_ac1e78a42d62d2ee921d861b2bb932a7c}} 
+void {\bfseries matrix\+\_\+add} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$B)
+\item 
+\mbox{\Hypertarget{matrix_8h_a516702d69391115390dadfd82a239a5e}\label{matrix_8h_a516702d69391115390dadfd82a239a5e}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+id} (uint64\+\_\+t n)
+\item 
+\mbox{\Hypertarget{matrix_8h_a71c77b30fb0aa235b17a6137ca9a22aa}\label{matrix_8h_a71c77b30fb0aa235b17a6137ca9a22aa}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+mul} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$B)
+\item 
+\mbox{\Hypertarget{matrix_8h_a681fe0383775d33134e7d1f9455ba3bb}\label{matrix_8h_a681fe0383775d33134e7d1f9455ba3bb}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+lu} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$U)
+\item 
+\mbox{\Hypertarget{matrix_8h_aac9651131ce6bace790b4eb79f715817}\label{matrix_8h_aac9651131ce6bace790b4eb79f715817}} 
+\hyperlink{structmatrix__lup}{matrix\+\_\+lup\+\_\+t} $\ast$ {\bfseries matrix\+\_\+lupp} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$U)
+\item 
+\mbox{\Hypertarget{matrix_8h_a003fc17a8108fa2fef2b41567305a581}\label{matrix_8h_a003fc17a8108fa2fef2b41567305a581}} 
+void {\bfseries matrix\+\_\+row\+\_\+swap} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, uint64\+\_\+t k, uint64\+\_\+t l)
+\item 
+\mbox{\Hypertarget{matrix_8h_aed67f2e946d13d5e269a04e5afeedf6e}\label{matrix_8h_aed67f2e946d13d5e269a04e5afeedf6e}} 
+void {\bfseries matrix\+\_\+print} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\item 
+\mbox{\Hypertarget{matrix_8h_a7c8c4c18622b1c99a18a5082c699b94d}\label{matrix_8h_a7c8c4c18622b1c99a18a5082c699b94d}} 
+\hyperlink{structmatrix__qr}{matrix\+\_\+qr\+\_\+t} $\ast$ {\bfseries matrix\+\_\+reduced\+\_\+qr} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\item 
+\mbox{\Hypertarget{matrix_8h_ad7b763efbb57ab953f9e4b6ed8c9bd90}\label{matrix_8h_ad7b763efbb57ab953f9e4b6ed8c9bd90}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+transpose} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\item 
+\mbox{\Hypertarget{matrix_8h_a110a8bfee13e6a39f2cc20d83641a4c6}\label{matrix_8h_a110a8bfee13e6a39f2cc20d83641a4c6}} 
+void {\bfseries matrix\+\_\+destroy} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\item 
+\mbox{\Hypertarget{matrix_8h_a76d3cc678126c9e254c3f2292eea9937}\label{matrix_8h_a76d3cc678126c9e254c3f2292eea9937}} 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+lsq} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\item 
+\mbox{\Hypertarget{matrix_8h_a7ae8ac488523c525ecb0c4587c8ca9ba}\label{matrix_8h_a7ae8ac488523c525ecb0c4587c8ca9ba}} 
+double {\bfseries matrix\+\_\+jacobi} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$$\ast$x, double tol)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Matrix creation, algebra and decompositions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{matrix_8h_a7105309534bc7d6560bd5de5d739b686}\label{matrix_8h_a7105309534bc7d6560bd5de5d739b686}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+bs@{matrix\+\_\+bs}}
+\index{matrix\+\_\+bs@{matrix\+\_\+bs}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+bs()}{matrix\_bs()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+bs (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Solves an upper triangular system of equations using the backward substitution algorithm. 
+
+This function operates analogously to {\ttfamily matrix\+\_\+fs}, except this algorithm can be used to solve systems $Ax = b$ where $A$ is upper triangular. \mbox{\Hypertarget{matrix_8h_abad97daa1b997561d7568a06b213d0ff}\label{matrix_8h_abad97daa1b997561d7568a06b213d0ff}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+fs@{matrix\+\_\+fs}}
+\index{matrix\+\_\+fs@{matrix\+\_\+fs}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+fs()}{matrix\_fs()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+fs (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Solves a lower triangular system of equations using the forward substitution algorithm. 
+
+This function can be used to solve systems of linear equations where the matrix $L$ is a (square) lower triangular matrix and we wish to find $x$ such that $Lx = b$.
+
+Takes a lower triangular $n \times n$ matrix {\ttfamily A} and a vector {\bfseries }(represented as a $ n \times 1 $ matrix) and returns a newly allocated $n \times 1$ matrix {\ttfamily x} such that $Ax = b$.
+
+Example\+: suppose we wish to solve the system $\begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}x = (1, 0)^T$. The following code will use forward substitution to solve this system. 
+\begin{DoxyCode}
+\hyperlink{structmatrix}{matrix\_t}* A = matrix\_id(2);
+matrix\_set(A, 1, 0, 2.0);
+\hyperlink{structmatrix}{matrix\_t}* b = matrix\_create(2, 1);
+matrix\_set(b, 0, 0, 1.0);
+\hyperlink{structmatrix}{matrix\_t}* x = \hyperlink{matrix_8h_abad97daa1b997561d7568a06b213d0ff}{matrix\_fs}(A, b);
+\end{DoxyCode}
+ 
