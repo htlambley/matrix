@@ -146,7 +146,8 @@ void matrix_destroy(matrix_t* A) {
     free(A);
 }
 
-double matrix_get(struct matrix* m, uint64_t i, uint64_t j) {
+__attribute__((always_inline))
+inline double matrix_get(struct matrix* m, uint64_t i, uint64_t j) {
     return m->A[i * m->n + j]; 
 }
 
