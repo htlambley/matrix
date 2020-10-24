@@ -151,7 +151,8 @@ inline double matrix_get(struct matrix* m, uint64_t i, uint64_t j) {
     return m->A[i * m->n + j]; 
 }
 
-void matrix_set(struct matrix* m, uint64_t i, uint64_t j, double value) {
+__attribute__((always_inline))
+inline void matrix_set(struct matrix* m, uint64_t i, uint64_t j, double value) {
     m->A[i * m->n + j] = value;
 }
 
