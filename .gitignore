@@ -53,3 +53,4 @@ dkms.conf
 
 # Doxygen LaTeX
 latex/
+*.log
