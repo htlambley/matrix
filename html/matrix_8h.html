@@ -111,10 +111,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <tr class="memdesc:a3808b63ae2c6a59bc7e5661f4cafd2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a matrix <code>A</code> is lower triangular. <br /></td></tr>
 <tr class="separator:a3808b63ae2c6a59bc7e5661f4cafd2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8098e0ff84c96b488ad54afba67d13c1"><td class="memItemLeft" align="right" valign="top"><a id="a8098e0ff84c96b488ad54afba67d13c1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_upper_triangular</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a8098e0ff84c96b488ad54afba67d13c1">matrix_upper_triangular</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:a8098e0ff84c96b488ad54afba67d13c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a matrix <code>A</code> is upper triangular. <br /></td></tr>
 <tr class="separator:a8098e0ff84c96b488ad54afba67d13c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab370408adfaf4f226061b7ea74c45954"><td class="memItemLeft" align="right" valign="top"><a id="ab370408adfaf4f226061b7ea74c45954"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_diagonal</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ab370408adfaf4f226061b7ea74c45954">matrix_diagonal</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:ab370408adfaf4f226061b7ea74c45954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a matrix <code>A</code> is diagonal. <br /></td></tr>
 <tr class="separator:ab370408adfaf4f226061b7ea74c45954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad97daa1b997561d7568a06b213d0ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#abad97daa1b997561d7568a06b213d0ff">matrix_fs</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
 <tr class="memdesc:abad97daa1b997561d7568a06b213d0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a lower triangular system of equations using the forward substitution algorithm.  <a href="#abad97daa1b997561d7568a06b213d0ff">More...</a><br /></td></tr>
@@ -131,13 +133,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_diagonal</b> (
 <tr class="memitem:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a> (uint64_t m, uint64_t n)</td></tr>
 <tr class="memdesc:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises a new matrix with <code>m</code> rows and <code>n</code> columns.  <a href="#a6b678ba2f6002bc59f4703abaf5a9fb5">More...</a><br /></td></tr>
 <tr class="separator:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a362034b93f4ec6d1b7c5b464017993d4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a362034b93f4ec6d1b7c5b464017993d4">matrix_get</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, uint64_t i, uint64_t j)</td></tr>
-<tr class="memdesc:a362034b93f4ec6d1b7c5b464017993d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the element (<code>i</code>, <code>j</code>) from the matrix <code>A</code>, where <code>i</code> accesses the (i + 1)th row and <code>j</code> accesses the (j + 1)th column.  <a href="#a362034b93f4ec6d1b7c5b464017993d4">More...</a><br /></td></tr>
-<tr class="separator:a362034b93f4ec6d1b7c5b464017993d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3cb5d540d01a2435c147b0c08301609"><td class="memItemLeft" align="right" valign="top"><a id="ae3cb5d540d01a2435c147b0c08301609"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ae3cb5d540d01a2435c147b0c08301609">matrix_set</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, uint64_t i, uint64_t j, double value)</td></tr>
-<tr class="memdesc:ae3cb5d540d01a2435c147b0c08301609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the element (<code>i</code>, <code>j</code>) in the matrix <code>A</code> to <code>value</code>. <br /></td></tr>
-<tr class="separator:ae3cb5d540d01a2435c147b0c08301609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1e78a42d62d2ee921d861b2bb932a7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ac1e78a42d62d2ee921d861b2bb932a7c">matrix_add</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *B)</td></tr>
 <tr class="memdesc:ac1e78a42d62d2ee921d861b2bb932a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the matrices <code>A</code> and <code>B</code>, storing the result in the matrix <code>A</code>.  <a href="#ac1e78a42d62d2ee921d861b2bb932a7c">More...</a><br /></td></tr>
 <tr class="separator:ac1e78a42d62d2ee921d861b2bb932a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,8 +157,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <tr class="memdesc:aed67f2e946d13d5e269a04e5afeedf6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a compact representation of the matrix to stdout. <br /></td></tr>
 <tr class="separator:aed67f2e946d13d5e269a04e5afeedf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8c4c18622b1c99a18a5082c699b94d"><td class="memItemLeft" align="right" valign="top"><a id="a7c8c4c18622b1c99a18a5082c699b94d"></a>
-<a class="el" href="structmatrix__qr.html">matrix_qr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_reduced_qr</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<a class="el" href="structmatrix__qr.html">matrix_qr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7c8c4c18622b1c99a18a5082c699b94d">matrix_reduced_qr</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:a7c8c4c18622b1c99a18a5082c699b94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a reduced QR factorisation of the matrix <code>A</code> using the Gram&ndash;Schmidt orthonormalisation procedure. <br /></td></tr>
 <tr class="separator:a7c8c4c18622b1c99a18a5082c699b94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893ca4ce65ae097b8d5d1167dc84d189"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a893ca4ce65ae097b8d5d1167dc84d189">matrix_householder</a> (<a class="el" href="structmatrix.html">matrix_t</a> *v)</td></tr>
+<tr class="memdesc:a893ca4ce65ae097b8d5d1167dc84d189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Householder reflection with normal vector <code>v</code>.  <a href="#a893ca4ce65ae097b8d5d1167dc84d189">More...</a><br /></td></tr>
+<tr class="separator:a893ca4ce65ae097b8d5d1167dc84d189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa197f495ecc0e2d320ba991ffddceb63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix__qr.html">matrix_qr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#aa197f495ecc0e2d320ba991ffddceb63">matrix_qr_hh</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:aa197f495ecc0e2d320ba991ffddceb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a QR decomposition of <code>A</code> using the Householder reflections method.  <a href="#aa197f495ecc0e2d320ba991ffddceb63">More...</a><br /></td></tr>
+<tr class="separator:aa197f495ecc0e2d320ba991ffddceb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7b763efbb57ab953f9e4b6ed8c9bd90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ad7b763efbb57ab953f9e4b6ed8c9bd90">matrix_transpose</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
 <tr class="memdesc:ad7b763efbb57ab953f9e4b6ed8c9bd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new matrix equal to the transpose of <code>A</code>.  <a href="#ad7b763efbb57ab953f9e4b6ed8c9bd90">More...</a><br /></td></tr>
 <tr class="separator:ad7b763efbb57ab953f9e4b6ed8c9bd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,7 +173,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <tr class="memdesc:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory used by the matrix <code>A</code>.  <a href="#a110a8bfee13e6a39f2cc20d83641a4c6">More...</a><br /></td></tr>
 <tr class="separator:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76d3cc678126c9e254c3f2292eea9937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a76d3cc678126c9e254c3f2292eea9937">matrix_lsq</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
-<tr class="memdesc:a76d3cc678126c9e254c3f2292eea9937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_23.png"/>.  <a href="#a76d3cc678126c9e254c3f2292eea9937">More...</a><br /></td></tr>
+<tr class="memdesc:a76d3cc678126c9e254c3f2292eea9937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_25.png"/>.  <a href="#a76d3cc678126c9e254c3f2292eea9937">More...</a><br /></td></tr>
 <tr class="separator:a76d3cc678126c9e254c3f2292eea9937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7ae8ac488523c525ecb0c4587c8ca9ba">matrix_jacobi</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b, <a class="el" href="structmatrix.html">matrix_t</a> **x, double tol)</td></tr>
 <tr class="memdesc:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively solves the system <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <code>A</code> satisfies certain convergence criteria.  <a href="#a7ae8ac488523c525ecb0c4587c8ca9ba">More...</a><br /></td></tr>
@@ -324,7 +326,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <p>Solves a lower triangular system of equations using the forward substitution algorithm. </p>
 <p>This function can be used to solve systems of linear equations where the matrix <img class="formulaInl" alt="$L$" src="form_0.png"/> is a (square) lower triangular matrix and we wish to find <img class="formulaInl" alt="$x$" src="form_1.png"/> such that <img class="formulaInl" alt="$Lx = b$" src="form_2.png"/>.</p>
 <p>Takes a lower triangular <img class="formulaInl" alt="$n \times n$" src="form_3.png"/> matrix <code>A</code> and a vector <b></b>(represented as a <img class="formulaInl" alt="$ n \times 1 $" src="form_4.png"/> matrix) and returns a newly allocated <img class="formulaInl" alt="$n \times 1$" src="form_5.png"/> matrix <code>x</code> such that <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/>.</p>
-<p>Example: suppose we wish to solve the system <img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{pmatrix}x = (1, 0)^T$" src="form_7.png"/>. The following code will use forward substitution to solve this system. </p><div class="fragment"><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* A = <a class="code" href="matrix_8h.html#a516702d69391115390dadfd82a239a5e">matrix_id</a>(2);</div><div class="line"><a class="code" href="matrix_8h.html#ae3cb5d540d01a2435c147b0c08301609">matrix_set</a>(A, 1, 0, 2.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* b = <a class="code" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a>(2, 1);</div><div class="line"><a class="code" href="matrix_8h.html#ae3cb5d540d01a2435c147b0c08301609">matrix_set</a>(b, 0, 0, 1.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* x = <a class="code" href="matrix_8h.html#abad97daa1b997561d7568a06b213d0ff">matrix_fs</a>(A, b);</div></div><!-- fragment --> 
+<p>Example: suppose we wish to solve the system <img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{pmatrix}x = (1, 0)^T$" src="form_7.png"/>. The following code will use forward substitution to solve this system. </p><div class="fragment"><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* A = <a class="code" href="matrix_8h.html#a516702d69391115390dadfd82a239a5e">matrix_id</a>(2);</div><div class="line">matrix_set(A, 1, 0, 2.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* b = <a class="code" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a>(2, 1);</div><div class="line">matrix_set(b, 0, 0, 1.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* x = <a class="code" href="matrix_8h.html#abad97daa1b997561d7568a06b213d0ff">matrix_fs</a>(A, b);</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="afc259d420e7a3d29baca39bf24d96a3a"></a>
@@ -392,48 +394,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 
 </div>
 </div>
-<a id="a362034b93f4ec6d1b7c5b464017993d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a362034b93f4ec6d1b7c5b464017993d4">&#9670;&nbsp;</a></span>matrix_get()</h2>
+<a id="a893ca4ce65ae097b8d5d1167dc84d189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893ca4ce65ae097b8d5d1167dc84d189">&#9670;&nbsp;</a></span>matrix_householder()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double matrix_get </td>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_householder </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>j</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Accesses the element (<code>i</code>, <code>j</code>) from the matrix <code>A</code>, where <code>i</code> accesses the (i + 1)th row and <code>j</code> accesses the (j + 1)th column. </p>
-<dl class="section warning"><dt>Warning</dt><dd>In contrast to the mathematical notation <img class="formulaInl" alt="$a_{11}$" src="form_12.png"/> as the first element of the matrix, we denote the top left element by the index (0, 0), and the bottom right by (m - 1, n - 1) in an m x n matrix. </dd></dl>
+<p>Computes the Householder reflection with normal vector <code>v</code>. </p>
+<p>This function creates a new matrix <img class="formulaInl" alt="$ H = I_n - 2 v v^T $" src="form_19.png"/> which is called a <em>Householder reflection</em>. This is a reflection by the hyperplane normal to <code>v</code>, which should be given as an <img class="formulaInl" alt="$ n \times 1$" src="form_20.png"/> matrix. </p>
 
 </div>
 </div>
@@ -498,13 +476,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 
 <p>Iteratively solves the system <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <code>A</code> satisfies certain convergence criteria. </p>
 <p>In contrast to <code>matrix_ge</code> and related functions, this is an iterative solver to find the solution to a system of linear equations.</p>
-<p>As this is an iterative solver, a tolerance <code>tol</code> must be passed which sets when to stop: when the residual <img class="formulaInl" alt="$\lVert Ax - b \rVert $" src="form_26.png"/> is less than <code>tol</code>, we terminate.</p>
+<p>As this is an iterative solver, a tolerance <code>tol</code> must be passed which sets when to stop: when the residual <img class="formulaInl" alt="$\lVert Ax - b \rVert $" src="form_28.png"/> is less than <code>tol</code>, we terminate.</p>
 <p>This function will never iterate more than MAX_ITER times as defined in <code>matrix.c</code> to prevent infinite looping if the process does not converge.</p>
-<dl class="section return"><dt>Returns</dt><dd>The 2-norm of the residual <img class="formulaInl" alt="$Ax - b$" src="form_27.png"/> for the vector <code>x</code> which stores the solution found.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The 2-norm of the residual <img class="formulaInl" alt="$Ax - b$" src="form_29.png"/> for the vector <code>x</code> which stores the solution found.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The iterative method will only converge if certain criteria are satisified by <code>A</code>. If these are not satisfied, the iterations may never converge to the true value. The following are sufficient conditions for the convergence of the Jacobi method:<ul>
-<li>the 'strong row sum' criterion, <img class="formulaInl" alt="$|a_{ii}| &gt; \sum_{j \neq i} |a_{ij}|$" src="form_28.png"/> for all <img class="formulaInl" alt="$i$" src="form_29.png"/></li>
+<li>the 'strong row sum' criterion, <img class="formulaInl" alt="$|a_{ii}| &gt; \sum_{j \neq i} |a_{ij}|$" src="form_30.png"/> for all <img class="formulaInl" alt="$i$" src="form_31.png"/></li>
 <li>the 'strong column sum' criterion, formulated analogously to above,</li>
-<li>irreducibility and the 'weak row sum' criterion <img class="formulaInl" alt="$|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and $" src="form_30.png"/>|a_{kk}| &gt; {j  k} |a_{kj}| for some row k. </li>
+<li>irreducibility and the 'weak row sum' criterion <img class="formulaInl" alt="$|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and $" src="form_32.png"/>|a_{kk}| &gt; {j  k} |a_{kj}| for some row k. </li>
 </ul>
 </dd></dl>
 
@@ -536,8 +514,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
       </table>
 </div><div class="memdoc">
 
-<p>Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_23.png"/>. </p>
-<p>This function can be used to obtain a minimiser of the function <img class="formulaInl" alt="$g(x) = \frac12 \lVert Ax - b \rVert^2$" src="form_24.png"/> given an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> matrix <code>A</code> and a <img class="formulaInl" alt="$m \times 1$" src="form_25.png"/> matrix <code>b</code>. These problems are known as <b>least squares problems</b>.</p>
+<p>Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_25.png"/>. </p>
+<p>This function can be used to obtain a minimiser of the function <img class="formulaInl" alt="$g(x) = \frac12 \lVert Ax - b \rVert^2$" src="form_26.png"/> given an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> matrix <code>A</code> and a <img class="formulaInl" alt="$m \times 1$" src="form_27.png"/> matrix <code>b</code>. These problems are known as <b>least squares problems</b>.</p>
 <p>Internally, this function calculates the reduced QR factorisation of <code>A</code> and then solves the system using backward substitution.</p>
 <dl class="section warning"><dt>Warning</dt><dd>We require <code>A</code> to be of full rank or else the solution is not uniquely determined to the least squares problem. </dd></dl>
 
@@ -620,6 +598,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 
 </div>
 </div>
+<a id="aa197f495ecc0e2d320ba991ffddceb63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa197f495ecc0e2d320ba991ffddceb63">&#9670;&nbsp;</a></span>matrix_qr_hh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix__qr.html">matrix_qr_t</a>* matrix_qr_hh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a QR decomposition of <code>A</code> using the Householder reflections method. </p>
+<p>This is an alternative to computing the QR decomposition with <code>matrix_reduced_qr</code>, which uses the Gram&ndash;Schmidt orthonormalisation procedure. The Householder reflections method tends to be numerically more stable than the Gram&ndash;Schmidt method.</p>
+<dl class="section return"><dt>Returns</dt><dd>A heap-allocated structure storing newly allocated matrices Q and R as calculated by the algorithm. The original matrix <code>A</code> is left unchanged. </dd></dl>
+
+</div>
+</div>
 <a id="ad7b763efbb57ab953f9e4b6ed8c9bd90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7b763efbb57ab953f9e4b6ed8c9bd90">&#9670;&nbsp;</a></span>matrix_transpose()</h2>
 
@@ -637,7 +637,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Creates a new matrix equal to the transpose of <code>A</code>. </p>
-<p>The transpose of an <img class="formulaInl" alt="$ m \times n $" src="form_19.png"/> matrix is an <img class="formulaInl" alt="$ n \times m $" src="form_20.png"/> matrix where <img class="formulaInl" alt="$ a_{ij} = b_{ji} $" src="form_21.png"/> where <img class="formulaInl" alt="$ b_{ij} $" src="form_22.png"/> are the elements of the transpose matrix. </p>
+<p>The transpose of an <img class="formulaInl" alt="$ m \times n $" src="form_21.png"/> matrix is an <img class="formulaInl" alt="$ n \times m $" src="form_22.png"/> matrix where <img class="formulaInl" alt="$ a_{ij} = b_{ji} $" src="form_23.png"/> where <img class="formulaInl" alt="$ b_{ij} $" src="form_24.png"/> are the elements of the transpose matrix. </p>
 
 </div>
 </div>

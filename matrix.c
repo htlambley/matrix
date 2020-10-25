@@ -6,11 +6,31 @@
 #include <stdio.h>
 #include "matrix.h"
 
-#define EPSILON 1e-6
+#define EPSILON 1e-7
 #define MAX_ITER 10000
 
 bool approx_equal(double x, double y, double eps) {
     return fabs(x - y) < eps;
+}
+
+double sgn(double x) {
+    if (x >= EPSILON) {
+	return 1.0;
+    } else if (approx_equal(x, 0, EPSILON)) {
+	return 0.0;
+    } else {
+	return -1.0;
+    }
+}
+
+__attribute__((always_inline))
+static inline double matrix_get(struct matrix* m, uint64_t i, uint64_t j) {
+    return m->A[i * m->n + j]; 
+}
+
+__attribute__((always_inline))
+static inline void matrix_set(struct matrix* m, uint64_t i, uint64_t j, double value) {
+    m->A[i * m->n + j] = value;
 }
 
 bool matrix_upper_triangular(matrix_t* A) {
@@ -22,7 +42,7 @@ bool matrix_upper_triangular(matrix_t* A) {
 	for (uint64_t j = 0; j < i; j++) {
 	    if (!approx_equal(matrix_get(A, i, j), 0, EPSILON)) {
 		return false;
-	    }
+	    }	  
 	}	
     }
     return true;
@@ -142,20 +162,22 @@ matrix_t* matrix_create(uint64_t m, uint64_t n) {
     return mat;
 }
 
+
+matrix_t* matrix_clone(matrix_t* A) {
+    matrix_t* B = matrix_create(A->m, A->n);
+    for (uint64_t i = 0; i < A->m; i++) {
+	for (uint64_t j = 0; j < A->n; j++) {
+	    matrix_set(B, i, j, matrix_get(A, i, j));
+	}
+    }
+    return B;
+}
+
 void matrix_destroy(matrix_t* A) {
     free(A->A);
     free(A);
 }
 
-__attribute__((always_inline))
-inline double matrix_get(struct matrix* m, uint64_t i, uint64_t j) {
-    return m->A[i * m->n + j]; 
-}
-
-__attribute__((always_inline))
-inline void matrix_set(struct matrix* m, uint64_t i, uint64_t j, double value) {
-    m->A[i * m->n + j] = value;
-}
 
 /*
  * Adds two matrices, storing the value in the first matrix.
@@ -407,6 +429,64 @@ matrix_qr_t* matrix_reduced_qr(matrix_t* A) {
     return ret;
 }
 
+// TODO: document in header.
+matrix_t* matrix_basis_vector(uint64_t n, uint64_t i) {
+    assert(i < n);
+    matrix_t* e_i = matrix_create(n, 1);
+    matrix_set(e_i, i, 0, 1.0);
+    return e_i;
+}
+
+// TODO: document
+matrix_t* matrix_householder(matrix_t* v) {
+    assert(v->n == 1);
+    matrix_t* H = matrix_id(v->m);
+    matrix_t* v_t = matrix_transpose(v);
+    matrix_t* subtractand = matrix_mul(v, v_t); 
+    matrix_destroy(v_t);
+    matrix_sub_smul(H, subtractand, 2.0);
+    matrix_destroy(subtractand);
+    return H;
+}
+
+matrix_qr_t* matrix_qr_hh(matrix_t* A) {
+    assert(A->m == A->n);
+    matrix_t* Q = matrix_id(A->m);
+    matrix_t* R = matrix_clone(A);
+    for (uint64_t k = 0; k < A->m - 1; k++) {
+	matrix_t* u = matrix_create(A->m - k, 1); 
+	for (uint64_t i = k; i < A->m; i++) {
+	    matrix_set(u, i, 0, matrix_get(R, i, k));
+	}
+	double norm_u = matrix_norm_frob(u);
+	matrix_t* v = matrix_basis_vector(A->m - k, 1);
+	matrix_scalar_mul(v, sgn(matrix_get(u,0,0)) * norm_u);
+	matrix_add(v, u);
+	double norm_v = matrix_norm_frob(v);
+	matrix_scalar_mul(v, 1.0 / norm_v);
+	matrix_t* H = matrix_householder(v);
+	matrix_destroy(u);
+	matrix_destroy(v);
+	// Construct block matrix Q = [ I 0 ; 0 H];
+	matrix_t* Q_k = matrix_id(A->m);
+	for (uint64_t i = k; i < A->m; i++) {
+	    for(uint64_t j = k; j < A->m; j++) {
+		matrix_set(Q_k, i, j, matrix_get(H, i - k, j - k));
+	    }
+	}
+	matrix_t* R_next = matrix_mul(Q_k, R);
+	matrix_destroy(R);
+	R = R_next;
+	matrix_t* Q_next = matrix_mul(Q_k, Q);
+	matrix_destroy(Q);
+	Q = Q_next;
+    }
+    matrix_qr_t* ret = (matrix_qr_t*)malloc(sizeof(matrix_qr_t));
+    ret->Q = Q;
+    ret->R = R;
+    return ret; 
+}
+
 matrix_t* matrix_transpose(matrix_t* A) {
     matrix_t* A_T = matrix_create(A->n, A->m);
     for (uint64_t i = 0; i < A->m; i++) {
@@ -438,15 +518,6 @@ matrix_t* matrix_lsq(matrix_t* A, matrix_t* b) {
     return x;
 }
 
-matrix_t* matrix_clone(matrix_t* A) {
-    matrix_t* B = matrix_create(A->m, A->n);
-    for (uint64_t i = 0; i < A->m; i++) {
-	for (uint64_t j = 0; j < A->n; j++) {
-	    matrix_set(B, i, j, matrix_get(A, i, j));
-	}
-    }
-    return B;
-}
 
 /* Solves the system Ax = b, where A is an n x n matrix and
  * b is an n-dimensional vector using the iterative Jacobi method,

@@ -6,6 +6,7 @@
  * @brief Matrix creation, algebra and decompositions.
  */
 
+
 /**
  * @brief The main matrix type.
  *
@@ -47,7 +48,13 @@ typedef struct matrix_qr matrix_qr_t;
  * @brief Tests whether a matrix @p A is lower triangular. 
  */
 bool matrix_lower_triangular(matrix_t* A); 
+/** 
+ * @brief Tests whether a matrix @p A is upper triangular.
+ */
 bool matrix_upper_triangular(matrix_t* A);
+/**
+ * @brief Tests whether a matrix @p A is diagonal.
+ */
 bool matrix_diagonal(matrix_t* A);
 /** 
  * @brief Solves a lower triangular system of equations using the forward 
@@ -137,11 +144,11 @@ matrix_t* matrix_create(uint64_t m, uint64_t n);
  * first element of the matrix, we denote the top left element by the index
  * (0, 0), and the bottom right by (m - 1, n - 1) in an m x n matrix. 
  */
-inline double matrix_get(matrix_t* A, uint64_t i, uint64_t j);
+static inline double matrix_get(matrix_t* A, uint64_t i, uint64_t j);
 /**
  * @brief Sets the element (@p i, @p j) in the matrix @p A to @p value.
  */
-inline void matrix_set(matrix_t* A, uint64_t i, uint64_t j, double value);
+static inline void matrix_set(matrix_t* A, uint64_t i, uint64_t j, double value);
 /**
  * @brief Adds the matrices @p A and @p B, storing the result in the matrix
  * @p A. 
@@ -213,7 +220,33 @@ void matrix_row_swap(matrix_t* A, uint64_t k, uint64_t l);
  * @brief Prints a compact representation of the matrix to stdout.
  */
 void matrix_print(matrix_t* A);
+/**
+ * @brief Computes a reduced QR factorisation of the matrix @p A using
+ * the Gram--Schmidt orthonormalisation procedure.
+ */
 matrix_qr_t* matrix_reduced_qr(matrix_t* A);
+/**
+ * @brief Computes the Householder reflection with normal vector @p v.
+ * 
+ * This function creates a new matrix \f$ H = I_n - 2 v v^T \f$ which is
+ * called a <i>Householder reflection</i>. This is a reflection by the 
+ * hyperplane normal to @p v, which should be given as an \f$ n \times 1\f$
+ * matrix.
+ */
+matrix_t* matrix_householder(matrix_t* v);
+/**
+ * @brief Computes a QR decomposition of @p A using the Householder
+ * reflections method.
+ *
+ * This is an alternative to computing the QR decomposition with 
+ * <tt>matrix_reduced_qr</tt>, which uses the Gram--Schmidt orthonormalisation
+ * procedure. The Householder reflections method tends to be numerically more
+ * stable than the Gram--Schmidt method.
+ *
+ * @returns A heap-allocated structure storing newly allocated matrices Q and R
+ * as calculated by the algorithm. The original matrix @p A is left unchanged.
+ */
+matrix_qr_t* matrix_qr_hh(matrix_t* A);
 /**
  * @brief Creates a new matrix equal to the transpose of @p A.
  *
@@ -275,4 +308,5 @@ matrix_t* matrix_lsq(matrix_t* A, matrix_t* b);
  * \f$|a_{kk}| > \sum_{j \neq k} |a_{kj}| for some row k.
  */
 double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol);
+
 

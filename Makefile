@@ -1,5 +1,5 @@
-CC=gcc
-CFLAGS=-lm -Wall -Wpedantic -pg -O3
+CC=clang
+CFLAGS=-lm -Wall -Wpedantic -pg -O3 -ferror-limit=1
 
 .c.o:
 	$(CC) -c -o $@ $< $(CFLAGS)
