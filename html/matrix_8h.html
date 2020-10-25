@@ -107,7 +107,8 @@ typedef struct <a class="el" href="structmatrix__qr.html">matrix_qr</a>&#160;</t
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3808b63ae2c6a59bc7e5661f4cafd2ed"><td class="memItemLeft" align="right" valign="top"><a id="a3808b63ae2c6a59bc7e5661f4cafd2ed"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_lower_triangular</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a3808b63ae2c6a59bc7e5661f4cafd2ed">matrix_lower_triangular</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:a3808b63ae2c6a59bc7e5661f4cafd2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a matrix <code>A</code> is lower triangular. <br /></td></tr>
 <tr class="separator:a3808b63ae2c6a59bc7e5661f4cafd2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8098e0ff84c96b488ad54afba67d13c1"><td class="memItemLeft" align="right" valign="top"><a id="a8098e0ff84c96b488ad54afba67d13c1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_upper_triangular</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
@@ -121,61 +122,95 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_diagonal</b> (
 <tr class="memitem:a7105309534bc7d6560bd5de5d739b686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7105309534bc7d6560bd5de5d739b686">matrix_bs</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
 <tr class="memdesc:a7105309534bc7d6560bd5de5d739b686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an upper triangular system of equations using the backward substitution algorithm.  <a href="#a7105309534bc7d6560bd5de5d739b686">More...</a><br /></td></tr>
 <tr class="separator:a7105309534bc7d6560bd5de5d739b686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc259d420e7a3d29baca39bf24d96a3a"><td class="memItemLeft" align="right" valign="top"><a id="afc259d420e7a3d29baca39bf24d96a3a"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_ge</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
+<tr class="memitem:afc259d420e7a3d29baca39bf24d96a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#afc259d420e7a3d29baca39bf24d96a3a">matrix_ge</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
+<tr class="memdesc:afc259d420e7a3d29baca39bf24d96a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (without pivoting).  <a href="#afc259d420e7a3d29baca39bf24d96a3a">More...</a><br /></td></tr>
 <tr class="separator:afc259d420e7a3d29baca39bf24d96a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7479f97763962d4ba0735012eafb3c21"><td class="memItemLeft" align="right" valign="top"><a id="a7479f97763962d4ba0735012eafb3c21"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_gepp</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
+<tr class="memitem:a7479f97763962d4ba0735012eafb3c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7479f97763962d4ba0735012eafb3c21">matrix_gepp</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
+<tr class="memdesc:a7479f97763962d4ba0735012eafb3c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (with pivoting).  <a href="#a7479f97763962d4ba0735012eafb3c21">More...</a><br /></td></tr>
 <tr class="separator:a7479f97763962d4ba0735012eafb3c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="memItemLeft" align="right" valign="top"><a id="a6b678ba2f6002bc59f4703abaf5a9fb5"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_create</b> (uint64_t m, uint64_t n)</td></tr>
+<tr class="memitem:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a> (uint64_t m, uint64_t n)</td></tr>
+<tr class="memdesc:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises a new matrix with <code>m</code> rows and <code>n</code> columns.  <a href="#a6b678ba2f6002bc59f4703abaf5a9fb5">More...</a><br /></td></tr>
 <tr class="separator:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2311a8fbf41ae13364ef827e4a4a3ba4"><td class="memItemLeft" align="right" valign="top"><a id="a2311a8fbf41ae13364ef827e4a4a3ba4"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_get</b> (<a class="el" href="structmatrix.html">matrix_t</a> *m, uint64_t i, uint64_t j)</td></tr>
-<tr class="separator:a2311a8fbf41ae13364ef827e4a4a3ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab35d9079fa743c9f61bed4b06b2954d8"><td class="memItemLeft" align="right" valign="top"><a id="ab35d9079fa743c9f61bed4b06b2954d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_set</b> (<a class="el" href="structmatrix.html">matrix_t</a> *m, uint64_t i, uint64_t j, double value)</td></tr>
-<tr class="separator:ab35d9079fa743c9f61bed4b06b2954d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e78a42d62d2ee921d861b2bb932a7c"><td class="memItemLeft" align="right" valign="top"><a id="ac1e78a42d62d2ee921d861b2bb932a7c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_add</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *B)</td></tr>
+<tr class="memitem:a362034b93f4ec6d1b7c5b464017993d4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a362034b93f4ec6d1b7c5b464017993d4">matrix_get</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, uint64_t i, uint64_t j)</td></tr>
+<tr class="memdesc:a362034b93f4ec6d1b7c5b464017993d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the element (<code>i</code>, <code>j</code>) from the matrix <code>A</code>, where <code>i</code> accesses the (i + 1)th row and <code>j</code> accesses the (j + 1)th column.  <a href="#a362034b93f4ec6d1b7c5b464017993d4">More...</a><br /></td></tr>
+<tr class="separator:a362034b93f4ec6d1b7c5b464017993d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3cb5d540d01a2435c147b0c08301609"><td class="memItemLeft" align="right" valign="top"><a id="ae3cb5d540d01a2435c147b0c08301609"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ae3cb5d540d01a2435c147b0c08301609">matrix_set</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, uint64_t i, uint64_t j, double value)</td></tr>
+<tr class="memdesc:ae3cb5d540d01a2435c147b0c08301609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the element (<code>i</code>, <code>j</code>) in the matrix <code>A</code> to <code>value</code>. <br /></td></tr>
+<tr class="separator:ae3cb5d540d01a2435c147b0c08301609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e78a42d62d2ee921d861b2bb932a7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ac1e78a42d62d2ee921d861b2bb932a7c">matrix_add</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *B)</td></tr>
+<tr class="memdesc:ac1e78a42d62d2ee921d861b2bb932a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the matrices <code>A</code> and <code>B</code>, storing the result in the matrix <code>A</code>.  <a href="#ac1e78a42d62d2ee921d861b2bb932a7c">More...</a><br /></td></tr>
 <tr class="separator:ac1e78a42d62d2ee921d861b2bb932a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a516702d69391115390dadfd82a239a5e"><td class="memItemLeft" align="right" valign="top"><a id="a516702d69391115390dadfd82a239a5e"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_id</b> (uint64_t n)</td></tr>
+<tr class="memitem:a516702d69391115390dadfd82a239a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a516702d69391115390dadfd82a239a5e">matrix_id</a> (uint64_t n)</td></tr>
+<tr class="memdesc:a516702d69391115390dadfd82a239a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new identity matrix of dimension <code>n</code>.  <a href="#a516702d69391115390dadfd82a239a5e">More...</a><br /></td></tr>
 <tr class="separator:a516702d69391115390dadfd82a239a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71c77b30fb0aa235b17a6137ca9a22aa"><td class="memItemLeft" align="right" valign="top"><a id="a71c77b30fb0aa235b17a6137ca9a22aa"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_mul</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *B)</td></tr>
+<tr class="memitem:a71c77b30fb0aa235b17a6137ca9a22aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a71c77b30fb0aa235b17a6137ca9a22aa">matrix_mul</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *B)</td></tr>
+<tr class="memdesc:a71c77b30fb0aa235b17a6137ca9a22aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new matrix equal to the product of <code>A</code> and <code>B</code>.  <a href="#a71c77b30fb0aa235b17a6137ca9a22aa">More...</a><br /></td></tr>
 <tr class="separator:a71c77b30fb0aa235b17a6137ca9a22aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a681fe0383775d33134e7d1f9455ba3bb"><td class="memItemLeft" align="right" valign="top"><a id="a681fe0383775d33134e7d1f9455ba3bb"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_lu</b> (<a class="el" href="structmatrix.html">matrix_t</a> *U)</td></tr>
+<tr class="memitem:a681fe0383775d33134e7d1f9455ba3bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a681fe0383775d33134e7d1f9455ba3bb">matrix_lu</a> (<a class="el" href="structmatrix.html">matrix_t</a> *U)</td></tr>
+<tr class="memdesc:a681fe0383775d33134e7d1f9455ba3bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the LU decomposition of the given matrix.  <a href="#a681fe0383775d33134e7d1f9455ba3bb">More...</a><br /></td></tr>
 <tr class="separator:a681fe0383775d33134e7d1f9455ba3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac9651131ce6bace790b4eb79f715817"><td class="memItemLeft" align="right" valign="top"><a id="aac9651131ce6bace790b4eb79f715817"></a>
-<a class="el" href="structmatrix__lup.html">matrix_lup_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_lupp</b> (<a class="el" href="structmatrix.html">matrix_t</a> *U)</td></tr>
+<tr class="memitem:aac9651131ce6bace790b4eb79f715817"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix__lup.html">matrix_lup_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#aac9651131ce6bace790b4eb79f715817">matrix_lupp</a> (<a class="el" href="structmatrix.html">matrix_t</a> *U)</td></tr>
+<tr class="memdesc:aac9651131ce6bace790b4eb79f715817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the LU decomposition algorithm (with partial pivoting of rows).  <a href="#aac9651131ce6bace790b4eb79f715817">More...</a><br /></td></tr>
 <tr class="separator:aac9651131ce6bace790b4eb79f715817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a003fc17a8108fa2fef2b41567305a581"><td class="memItemLeft" align="right" valign="top"><a id="a003fc17a8108fa2fef2b41567305a581"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_row_swap</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A, uint64_t k, uint64_t l)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a003fc17a8108fa2fef2b41567305a581">matrix_row_swap</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, uint64_t k, uint64_t l)</td></tr>
+<tr class="memdesc:a003fc17a8108fa2fef2b41567305a581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the rows <code>k</code> and <code>l</code> in the matrix <code>A</code>. <br /></td></tr>
 <tr class="separator:a003fc17a8108fa2fef2b41567305a581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed67f2e946d13d5e269a04e5afeedf6e"><td class="memItemLeft" align="right" valign="top"><a id="aed67f2e946d13d5e269a04e5afeedf6e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_print</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#aed67f2e946d13d5e269a04e5afeedf6e">matrix_print</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:aed67f2e946d13d5e269a04e5afeedf6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a compact representation of the matrix to stdout. <br /></td></tr>
 <tr class="separator:aed67f2e946d13d5e269a04e5afeedf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8c4c18622b1c99a18a5082c699b94d"><td class="memItemLeft" align="right" valign="top"><a id="a7c8c4c18622b1c99a18a5082c699b94d"></a>
 <a class="el" href="structmatrix__qr.html">matrix_qr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_reduced_qr</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
 <tr class="separator:a7c8c4c18622b1c99a18a5082c699b94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b763efbb57ab953f9e4b6ed8c9bd90"><td class="memItemLeft" align="right" valign="top"><a id="ad7b763efbb57ab953f9e4b6ed8c9bd90"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_transpose</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memitem:ad7b763efbb57ab953f9e4b6ed8c9bd90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ad7b763efbb57ab953f9e4b6ed8c9bd90">matrix_transpose</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:ad7b763efbb57ab953f9e4b6ed8c9bd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new matrix equal to the transpose of <code>A</code>.  <a href="#ad7b763efbb57ab953f9e4b6ed8c9bd90">More...</a><br /></td></tr>
 <tr class="separator:ad7b763efbb57ab953f9e4b6ed8c9bd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="memItemLeft" align="right" valign="top"><a id="a110a8bfee13e6a39f2cc20d83641a4c6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_destroy</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memitem:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a110a8bfee13e6a39f2cc20d83641a4c6">matrix_destroy</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
+<tr class="memdesc:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory used by the matrix <code>A</code>.  <a href="#a110a8bfee13e6a39f2cc20d83641a4c6">More...</a><br /></td></tr>
 <tr class="separator:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76d3cc678126c9e254c3f2292eea9937"><td class="memItemLeft" align="right" valign="top"><a id="a76d3cc678126c9e254c3f2292eea9937"></a>
-<a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_lsq</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
+<tr class="memitem:a76d3cc678126c9e254c3f2292eea9937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a76d3cc678126c9e254c3f2292eea9937">matrix_lsq</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
+<tr class="memdesc:a76d3cc678126c9e254c3f2292eea9937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_23.png"/>.  <a href="#a76d3cc678126c9e254c3f2292eea9937">More...</a><br /></td></tr>
 <tr class="separator:a76d3cc678126c9e254c3f2292eea9937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memItemLeft" align="right" valign="top"><a id="a7ae8ac488523c525ecb0c4587c8ca9ba"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_jacobi</b> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b, <a class="el" href="structmatrix.html">matrix_t</a> **x, double tol)</td></tr>
+<tr class="memitem:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7ae8ac488523c525ecb0c4587c8ca9ba">matrix_jacobi</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b, <a class="el" href="structmatrix.html">matrix_t</a> **x, double tol)</td></tr>
+<tr class="memdesc:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively solves the system <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <code>A</code> satisfies certain convergence criteria.  <a href="#a7ae8ac488523c525ecb0c4587c8ca9ba">More...</a><br /></td></tr>
 <tr class="separator:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Matrix creation, algebra and decompositions. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ac1e78a42d62d2ee921d861b2bb932a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e78a42d62d2ee921d861b2bb932a7c">&#9670;&nbsp;</a></span>matrix_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matrix_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the matrices <code>A</code> and <code>B</code>, storing the result in the matrix <code>A</code>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Note carefully that this will overwrite what is stored in the matrix <code>A</code>, and leave <code>B</code> unchanged. This is to avoid allocating another matrix unnecessarily. If you need to keep the original <code>A</code>, allocate a copy using <code>matrix_clone</code>. </dd></dl>
+
+</div>
+</div>
 <a id="a7105309534bc7d6560bd5de5d739b686"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7105309534bc7d6560bd5de5d739b686">&#9670;&nbsp;</a></span>matrix_bs()</h2>
 
@@ -204,6 +239,59 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_jacobi</b> (
 
 <p>Solves an upper triangular system of equations using the backward substitution algorithm. </p>
 <p>This function operates analogously to <code>matrix_fs</code>, except this algorithm can be used to solve systems <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <img class="formulaInl" alt="$A$" src="form_8.png"/> is upper triangular. </p>
+
+</div>
+</div>
+<a id="a6b678ba2f6002bc59f4703abaf5a9fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b678ba2f6002bc59f4703abaf5a9fb5">&#9670;&nbsp;</a></span>matrix_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_create </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialises a new matrix with <code>m</code> rows and <code>n</code> columns. </p>
+<p>This function initialises an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> zero matrix, allocating space for it on the heap and returning a pointer to the newly created matrix.</p>
+<dl class="section warning"><dt>Warning</dt><dd>When you no longer require the matrix, you must use <code>matrix_destroy</code> in order to free the memory used by the matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a110a8bfee13e6a39f2cc20d83641a4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110a8bfee13e6a39f2cc20d83641a4c6">&#9670;&nbsp;</a></span>matrix_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matrix_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Frees the memory used by the matrix <code>A</code>. </p>
+<p>This function frees the array of doubles used to store the elements of the matrix and then frees the matrix structure itself. </p>
 
 </div>
 </div>
@@ -236,7 +324,321 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_jacobi</b> (
 <p>Solves a lower triangular system of equations using the forward substitution algorithm. </p>
 <p>This function can be used to solve systems of linear equations where the matrix <img class="formulaInl" alt="$L$" src="form_0.png"/> is a (square) lower triangular matrix and we wish to find <img class="formulaInl" alt="$x$" src="form_1.png"/> such that <img class="formulaInl" alt="$Lx = b$" src="form_2.png"/>.</p>
 <p>Takes a lower triangular <img class="formulaInl" alt="$n \times n$" src="form_3.png"/> matrix <code>A</code> and a vector <b></b>(represented as a <img class="formulaInl" alt="$ n \times 1 $" src="form_4.png"/> matrix) and returns a newly allocated <img class="formulaInl" alt="$n \times 1$" src="form_5.png"/> matrix <code>x</code> such that <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/>.</p>
-<p>Example: suppose we wish to solve the system <img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{pmatrix}x = (1, 0)^T$" src="form_7.png"/>. The following code will use forward substitution to solve this system. </p><div class="fragment"><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* A = matrix_id(2);</div><div class="line">matrix_set(A, 1, 0, 2.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* b = matrix_create(2, 1);</div><div class="line">matrix_set(b, 0, 0, 1.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* x = <a class="code" href="matrix_8h.html#abad97daa1b997561d7568a06b213d0ff">matrix_fs</a>(A, b);</div></div><!-- fragment --> 
+<p>Example: suppose we wish to solve the system <img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{pmatrix}x = (1, 0)^T$" src="form_7.png"/>. The following code will use forward substitution to solve this system. </p><div class="fragment"><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* A = <a class="code" href="matrix_8h.html#a516702d69391115390dadfd82a239a5e">matrix_id</a>(2);</div><div class="line"><a class="code" href="matrix_8h.html#ae3cb5d540d01a2435c147b0c08301609">matrix_set</a>(A, 1, 0, 2.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* b = <a class="code" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a>(2, 1);</div><div class="line"><a class="code" href="matrix_8h.html#ae3cb5d540d01a2435c147b0c08301609">matrix_set</a>(b, 0, 0, 1.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* x = <a class="code" href="matrix_8h.html#abad97daa1b997561d7568a06b213d0ff">matrix_fs</a>(A, b);</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="afc259d420e7a3d29baca39bf24d96a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc259d420e7a3d29baca39bf24d96a3a">&#9670;&nbsp;</a></span>matrix_ge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_ge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (without pivoting). </p>
+<p>Given an <img class="formulaInl" alt="$n \times n$" src="form_3.png"/> matrix <code>A</code> and a <img class="formulaInl" alt="$n \times 1$" src="form_5.png"/> matrix <code>b</code> representing a vector, this function uses Gaussian elimination to find a vector <img class="formulaInl" alt="$x$" src="form_1.png"/> such that <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/>.</p>
+<p>The Gaussian elimination algorithm consists of taking the LU decomposition of A, then using backward and forward substitution because we then obtain lower and upper triangular matrices that we can solve to obtain x.</p>
+<dl class="section warning"><dt>Warning</dt><dd>As this matrix uses the LU decomposition algorithm (without pivoting), we require all the <em>principal submatrices</em>, i.e. the submatrix consisting of the first j rows and columns, to be non-singular for j = 1 to n. Failing to verify this will result in the LU decomposition algorithm producing errors. This function does <b>not</b> check that the condition is satisfied. </dd></dl>
+
+</div>
+</div>
+<a id="a7479f97763962d4ba0735012eafb3c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7479f97763962d4ba0735012eafb3c21">&#9670;&nbsp;</a></span>matrix_gepp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_gepp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (with pivoting). </p>
+<p>For an explanation of the Gaussian elimination algorithm, see <code>matrix_ge</code>. Instead of using LU factorisation without pivoting, this method uses the LU factorisation with "partial pivoting". This algorithm is designed to deal with small or zero diagonal elements (called pivots). The algorithm must divide by the pivots, so small or zero pivots lead to significant numerical instabiliy.</p>
+<p>The pivoting looks for a permutation matrix <img class="formulaInl" alt="$P$" src="form_9.png"/> to maximise the pivot element by permuting rows, and then calculates the LU decomposition of <img class="formulaInl" alt="$PA$" src="form_10.png"/>. </p>
+
+</div>
+</div>
+<a id="a362034b93f4ec6d1b7c5b464017993d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362034b93f4ec6d1b7c5b464017993d4">&#9670;&nbsp;</a></span>matrix_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double matrix_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses the element (<code>i</code>, <code>j</code>) from the matrix <code>A</code>, where <code>i</code> accesses the (i + 1)th row and <code>j</code> accesses the (j + 1)th column. </p>
+<dl class="section warning"><dt>Warning</dt><dd>In contrast to the mathematical notation <img class="formulaInl" alt="$a_{11}$" src="form_12.png"/> as the first element of the matrix, we denote the top left element by the index (0, 0), and the bottom right by (m - 1, n - 1) in an m x n matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a516702d69391115390dadfd82a239a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516702d69391115390dadfd82a239a5e">&#9670;&nbsp;</a></span>matrix_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_id </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new identity matrix of dimension <code>n</code>. </p>
+<p>This function allocates a new matrix that is equal to the identity matrix <img class="formulaInl" alt="$I_n$" src="form_13.png"/> with 1 on the diagonal and zero elsewhere. As with <code>matrix_create</code>, you must destroy this manually using <code>matrix_destroy</code> after usage. </p>
+
+</div>
+</div>
+<a id="a7ae8ac488523c525ecb0c4587c8ca9ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae8ac488523c525ecb0c4587c8ca9ba">&#9670;&nbsp;</a></span>matrix_jacobi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double matrix_jacobi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> **&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iteratively solves the system <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <code>A</code> satisfies certain convergence criteria. </p>
+<p>In contrast to <code>matrix_ge</code> and related functions, this is an iterative solver to find the solution to a system of linear equations.</p>
+<p>As this is an iterative solver, a tolerance <code>tol</code> must be passed which sets when to stop: when the residual <img class="formulaInl" alt="$\lVert Ax - b \rVert $" src="form_26.png"/> is less than <code>tol</code>, we terminate.</p>
+<p>This function will never iterate more than MAX_ITER times as defined in <code>matrix.c</code> to prevent infinite looping if the process does not converge.</p>
+<dl class="section return"><dt>Returns</dt><dd>The 2-norm of the residual <img class="formulaInl" alt="$Ax - b$" src="form_27.png"/> for the vector <code>x</code> which stores the solution found.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The iterative method will only converge if certain criteria are satisified by <code>A</code>. If these are not satisfied, the iterations may never converge to the true value. The following are sufficient conditions for the convergence of the Jacobi method:<ul>
+<li>the 'strong row sum' criterion, <img class="formulaInl" alt="$|a_{ii}| &gt; \sum_{j \neq i} |a_{ij}|$" src="form_28.png"/> for all <img class="formulaInl" alt="$i$" src="form_29.png"/></li>
+<li>the 'strong column sum' criterion, formulated analogously to above,</li>
+<li>irreducibility and the 'weak row sum' criterion <img class="formulaInl" alt="$|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and $" src="form_30.png"/>|a_{kk}| &gt; {j  k} |a_{kj}| for some row k. </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a76d3cc678126c9e254c3f2292eea9937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d3cc678126c9e254c3f2292eea9937">&#9670;&nbsp;</a></span>matrix_lsq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_lsq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_23.png"/>. </p>
+<p>This function can be used to obtain a minimiser of the function <img class="formulaInl" alt="$g(x) = \frac12 \lVert Ax - b \rVert^2$" src="form_24.png"/> given an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> matrix <code>A</code> and a <img class="formulaInl" alt="$m \times 1$" src="form_25.png"/> matrix <code>b</code>. These problems are known as <b>least squares problems</b>.</p>
+<p>Internally, this function calculates the reduced QR factorisation of <code>A</code> and then solves the system using backward substitution.</p>
+<dl class="section warning"><dt>Warning</dt><dd>We require <code>A</code> to be of full rank or else the solution is not uniquely determined to the least squares problem. </dd></dl>
+
+</div>
+</div>
+<a id="a681fe0383775d33134e7d1f9455ba3bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a681fe0383775d33134e7d1f9455ba3bb">&#9670;&nbsp;</a></span>matrix_lu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_lu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>U</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the LU decomposition of the given matrix. </p>
+<p>See also <code>matrix_ge</code> for discussion of this function. This performs the LU decomposition algorithm without any pivoting.</p>
+<dl class="section return"><dt>Returns</dt><dd>A unit lower triangular matrix (i.e. a matrix with 1 on the diagonal and zero above). The upper triangular matrix will be stored in the matrix passed to the function.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This algorithm requires that <code>U</code> has all <em>principal submatrices</em> non-singular, as described in <code>matrix_ge</code>. You must be sure of this before running the algorithm. </dd></dl>
+
+</div>
+</div>
+<a id="aac9651131ce6bace790b4eb79f715817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9651131ce6bace790b4eb79f715817">&#9670;&nbsp;</a></span>matrix_lupp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix__lup.html">matrix_lup_t</a>* matrix_lupp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>U</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the LU decomposition algorithm (with partial pivoting of rows). </p>
+<p>Analogously to <code>matrix_lu</code>, this function can be used to find matrices <img class="formulaInl" alt="$L$" src="form_0.png"/> and <img class="formulaInl" alt="$U$" src="form_17.png"/>, where <img class="formulaInl" alt="$L$" src="form_0.png"/> is unit lower triangular and <img class="formulaInl" alt="$U$" src="form_17.png"/> is upper triangular.</p>
+<p>In contrast to <code>matrix_lu</code>, this function also finds a permutation matrix <img class="formulaInl" alt="$P$" src="form_9.png"/> such that <img class="formulaInl" alt="$PA = LU$" src="form_18.png"/>. This approach has the advantage of being able to work with matrices not satisfying the non-singular submatrix criterion. As discussed in <code>matrix_gepp</code>, pivoting the rows of the matrix prevents numerical instability for small (or zero) pivot elements. </p><dl class="section return"><dt>Returns</dt><dd>A structure containing the matrices L and P. The upper triangular matrix is stored in the argument passed to the function. </dd></dl>
+
+</div>
+</div>
+<a id="a71c77b30fb0aa235b17a6137ca9a22aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c77b30fb0aa235b17a6137ca9a22aa">&#9670;&nbsp;</a></span>matrix_mul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_mul </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new matrix equal to the product of <code>A</code> and <code>B</code>. </p>
+<p>The matrices must be of compatible dimension, so if <img class="formulaInl" alt="$A$" src="form_8.png"/> is an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> matrix, then <img class="formulaInl" alt="$B$" src="form_14.png"/> must be a <img class="formulaInl" alt="$n \times p$" src="form_15.png"/> matrix and the function will return a newly allocated <img class="formulaInl" alt="$m \times p$" src="form_16.png"/> matrix.</p>
+<p>Unlike the <code>matrix_add</code> function, this function allocates a new matrix because, unless <code>A</code> and <code>B</code> are square, the product matrix will not be of the same dimension as <code>A</code> or <code>B</code>. </p>
+
+</div>
+</div>
+<a id="ad7b763efbb57ab953f9e4b6ed8c9bd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b763efbb57ab953f9e4b6ed8c9bd90">&#9670;&nbsp;</a></span>matrix_transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_transpose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new matrix equal to the transpose of <code>A</code>. </p>
+<p>The transpose of an <img class="formulaInl" alt="$ m \times n $" src="form_19.png"/> matrix is an <img class="formulaInl" alt="$ n \times m $" src="form_20.png"/> matrix where <img class="formulaInl" alt="$ a_{ij} = b_{ji} $" src="form_21.png"/> where <img class="formulaInl" alt="$ b_{ij} $" src="form_22.png"/> are the elements of the transpose matrix. </p>
+
 </div>
 </div>
 </div><!-- contents -->

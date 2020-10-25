@@ -34,8 +34,8 @@ typedef struct \hyperlink{structmatrix__qr}{matrix\+\_\+qr} {\bfseries matrix\+\
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{matrix_8h_a3808b63ae2c6a59bc7e5661f4cafd2ed}\label{matrix_8h_a3808b63ae2c6a59bc7e5661f4cafd2ed}} 
-bool {\bfseries matrix\+\_\+lower\+\_\+triangular} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
-\item 
+bool \hyperlink{matrix_8h_a3808b63ae2c6a59bc7e5661f4cafd2ed}{matrix\+\_\+lower\+\_\+triangular} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\begin{DoxyCompactList}\small\item\em Tests whether a matrix {\ttfamily A} is lower triangular. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{matrix_8h_a8098e0ff84c96b488ad54afba67d13c1}\label{matrix_8h_a8098e0ff84c96b488ad54afba67d13c1}} 
 bool {\bfseries matrix\+\_\+upper\+\_\+triangular} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
 \item 
@@ -46,57 +46,44 @@ bool {\bfseries matrix\+\_\+diagonal} (\hyperlink{structmatrix}{matrix\+\_\+t} $
 \begin{DoxyCompactList}\small\item\em Solves a lower triangular system of equations using the forward substitution algorithm. \end{DoxyCompactList}\item 
 \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a7105309534bc7d6560bd5de5d739b686}{matrix\+\_\+bs} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
 \begin{DoxyCompactList}\small\item\em Solves an upper triangular system of equations using the backward substitution algorithm. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{matrix_8h_afc259d420e7a3d29baca39bf24d96a3a}\label{matrix_8h_afc259d420e7a3d29baca39bf24d96a3a}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+ge} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
-\item 
-\mbox{\Hypertarget{matrix_8h_a7479f97763962d4ba0735012eafb3c21}\label{matrix_8h_a7479f97763962d4ba0735012eafb3c21}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+gepp} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
-\item 
-\mbox{\Hypertarget{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}\label{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+create} (uint64\+\_\+t m, uint64\+\_\+t n)
-\item 
-\mbox{\Hypertarget{matrix_8h_a2311a8fbf41ae13364ef827e4a4a3ba4}\label{matrix_8h_a2311a8fbf41ae13364ef827e4a4a3ba4}} 
-double {\bfseries matrix\+\_\+get} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$m, uint64\+\_\+t i, uint64\+\_\+t j)
-\item 
-\mbox{\Hypertarget{matrix_8h_ab35d9079fa743c9f61bed4b06b2954d8}\label{matrix_8h_ab35d9079fa743c9f61bed4b06b2954d8}} 
-void {\bfseries matrix\+\_\+set} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$m, uint64\+\_\+t i, uint64\+\_\+t j, double value)
-\item 
-\mbox{\Hypertarget{matrix_8h_ac1e78a42d62d2ee921d861b2bb932a7c}\label{matrix_8h_ac1e78a42d62d2ee921d861b2bb932a7c}} 
-void {\bfseries matrix\+\_\+add} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$B)
-\item 
-\mbox{\Hypertarget{matrix_8h_a516702d69391115390dadfd82a239a5e}\label{matrix_8h_a516702d69391115390dadfd82a239a5e}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+id} (uint64\+\_\+t n)
-\item 
-\mbox{\Hypertarget{matrix_8h_a71c77b30fb0aa235b17a6137ca9a22aa}\label{matrix_8h_a71c77b30fb0aa235b17a6137ca9a22aa}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+mul} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$B)
-\item 
-\mbox{\Hypertarget{matrix_8h_a681fe0383775d33134e7d1f9455ba3bb}\label{matrix_8h_a681fe0383775d33134e7d1f9455ba3bb}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+lu} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$U)
-\item 
-\mbox{\Hypertarget{matrix_8h_aac9651131ce6bace790b4eb79f715817}\label{matrix_8h_aac9651131ce6bace790b4eb79f715817}} 
-\hyperlink{structmatrix__lup}{matrix\+\_\+lup\+\_\+t} $\ast$ {\bfseries matrix\+\_\+lupp} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$U)
-\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_afc259d420e7a3d29baca39bf24d96a3a}{matrix\+\_\+ge} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Solves a system of linear equations $Ax = b$ using Gaussian elimination (without pivoting). \end{DoxyCompactList}\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a7479f97763962d4ba0735012eafb3c21}{matrix\+\_\+gepp} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Solves a system of linear equations $Ax = b$ using Gaussian elimination (with pivoting). \end{DoxyCompactList}\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}{matrix\+\_\+create} (uint64\+\_\+t m, uint64\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Initialises a new matrix with {\ttfamily m} rows and {\ttfamily n} columns. \end{DoxyCompactList}\item 
+double \hyperlink{matrix_8h_a362034b93f4ec6d1b7c5b464017993d4}{matrix\+\_\+get} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, uint64\+\_\+t i, uint64\+\_\+t j)
+\begin{DoxyCompactList}\small\item\em Accesses the element ({\ttfamily i}, {\ttfamily j}) from the matrix {\ttfamily A}, where {\ttfamily i} accesses the (i + 1)th row and {\ttfamily j} accesses the (j + 1)th column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{matrix_8h_ae3cb5d540d01a2435c147b0c08301609}\label{matrix_8h_ae3cb5d540d01a2435c147b0c08301609}} 
+void \hyperlink{matrix_8h_ae3cb5d540d01a2435c147b0c08301609}{matrix\+\_\+set} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, uint64\+\_\+t i, uint64\+\_\+t j, double value)
+\begin{DoxyCompactList}\small\item\em Sets the element ({\ttfamily i}, {\ttfamily j}) in the matrix {\ttfamily A} to {\ttfamily value}. \end{DoxyCompactList}\item 
+void \hyperlink{matrix_8h_ac1e78a42d62d2ee921d861b2bb932a7c}{matrix\+\_\+add} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Adds the matrices {\ttfamily A} and {\ttfamily B}, storing the result in the matrix {\ttfamily A}. \end{DoxyCompactList}\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a516702d69391115390dadfd82a239a5e}{matrix\+\_\+id} (uint64\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Creates a new identity matrix of dimension {\ttfamily n}. \end{DoxyCompactList}\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a71c77b30fb0aa235b17a6137ca9a22aa}{matrix\+\_\+mul} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Creates a new matrix equal to the product of {\ttfamily A} and {\ttfamily B}. \end{DoxyCompactList}\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a681fe0383775d33134e7d1f9455ba3bb}{matrix\+\_\+lu} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$U)
+\begin{DoxyCompactList}\small\item\em Computes the LU decomposition of the given matrix. \end{DoxyCompactList}\item 
+\hyperlink{structmatrix__lup}{matrix\+\_\+lup\+\_\+t} $\ast$ \hyperlink{matrix_8h_aac9651131ce6bace790b4eb79f715817}{matrix\+\_\+lupp} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$U)
+\begin{DoxyCompactList}\small\item\em Computes the LU decomposition algorithm (with partial pivoting of rows). \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{matrix_8h_a003fc17a8108fa2fef2b41567305a581}\label{matrix_8h_a003fc17a8108fa2fef2b41567305a581}} 
-void {\bfseries matrix\+\_\+row\+\_\+swap} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, uint64\+\_\+t k, uint64\+\_\+t l)
-\item 
+void \hyperlink{matrix_8h_a003fc17a8108fa2fef2b41567305a581}{matrix\+\_\+row\+\_\+swap} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, uint64\+\_\+t k, uint64\+\_\+t l)
+\begin{DoxyCompactList}\small\item\em Swaps the rows {\ttfamily k} and {\ttfamily l} in the matrix {\ttfamily A}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{matrix_8h_aed67f2e946d13d5e269a04e5afeedf6e}\label{matrix_8h_aed67f2e946d13d5e269a04e5afeedf6e}} 
-void {\bfseries matrix\+\_\+print} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
-\item 
+void \hyperlink{matrix_8h_aed67f2e946d13d5e269a04e5afeedf6e}{matrix\+\_\+print} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\begin{DoxyCompactList}\small\item\em Prints a compact representation of the matrix to stdout. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{matrix_8h_a7c8c4c18622b1c99a18a5082c699b94d}\label{matrix_8h_a7c8c4c18622b1c99a18a5082c699b94d}} 
 \hyperlink{structmatrix__qr}{matrix\+\_\+qr\+\_\+t} $\ast$ {\bfseries matrix\+\_\+reduced\+\_\+qr} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
 \item 
-\mbox{\Hypertarget{matrix_8h_ad7b763efbb57ab953f9e4b6ed8c9bd90}\label{matrix_8h_ad7b763efbb57ab953f9e4b6ed8c9bd90}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+transpose} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
-\item 
-\mbox{\Hypertarget{matrix_8h_a110a8bfee13e6a39f2cc20d83641a4c6}\label{matrix_8h_a110a8bfee13e6a39f2cc20d83641a4c6}} 
-void {\bfseries matrix\+\_\+destroy} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
-\item 
-\mbox{\Hypertarget{matrix_8h_a76d3cc678126c9e254c3f2292eea9937}\label{matrix_8h_a76d3cc678126c9e254c3f2292eea9937}} 
-\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ {\bfseries matrix\+\_\+lsq} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
-\item 
-\mbox{\Hypertarget{matrix_8h_a7ae8ac488523c525ecb0c4587c8ca9ba}\label{matrix_8h_a7ae8ac488523c525ecb0c4587c8ca9ba}} 
-double {\bfseries matrix\+\_\+jacobi} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$$\ast$x, double tol)
-\end{DoxyCompactItemize}
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_ad7b763efbb57ab953f9e4b6ed8c9bd90}{matrix\+\_\+transpose} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\begin{DoxyCompactList}\small\item\em Creates a new matrix equal to the transpose of {\ttfamily A}. \end{DoxyCompactList}\item 
+void \hyperlink{matrix_8h_a110a8bfee13e6a39f2cc20d83641a4c6}{matrix\+\_\+destroy} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A)
+\begin{DoxyCompactList}\small\item\em Frees the memory used by the matrix {\ttfamily A}. \end{DoxyCompactList}\item 
+\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$ \hyperlink{matrix_8h_a76d3cc678126c9e254c3f2292eea9937}{matrix\+\_\+lsq} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Finds a vector x minimising the function $\frac12 \lVert Ax - b \rVert^2$. \end{DoxyCompactList}\item 
+double \hyperlink{matrix_8h_a7ae8ac488523c525ecb0c4587c8ca9ba}{matrix\+\_\+jacobi} (\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$A, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$b, \hyperlink{structmatrix}{matrix\+\_\+t} $\ast$$\ast$x, double tol)
+\begin{DoxyCompactList}\small\item\em Iteratively solves the system $Ax = b$ where {\ttfamily A} satisfies certain convergence criteria. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -105,6 +92,19 @@ Matrix creation, algebra and decompositions.
 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{matrix_8h_ac1e78a42d62d2ee921d861b2bb932a7c}\label{matrix_8h_ac1e78a42d62d2ee921d861b2bb932a7c}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+add@{matrix\+\_\+add}}
+\index{matrix\+\_\+add@{matrix\+\_\+add}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+add()}{matrix\_add()}}
+{\footnotesize\ttfamily void matrix\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Adds the matrices {\ttfamily A} and {\ttfamily B}, storing the result in the matrix {\ttfamily A}. 
+
+\begin{DoxyWarning}{Warning}
+Note carefully that this will overwrite what is stored in the matrix {\ttfamily A}, and leave {\ttfamily B} unchanged. This is to avoid allocating another matrix unnecessarily. If you need to keep the original {\ttfamily A}, allocate a copy using {\ttfamily matrix\+\_\+clone}. 
+\end{DoxyWarning}
 \mbox{\Hypertarget{matrix_8h_a7105309534bc7d6560bd5de5d739b686}\label{matrix_8h_a7105309534bc7d6560bd5de5d739b686}} 
 \index{matrix.\+h@{matrix.\+h}!matrix\+\_\+bs@{matrix\+\_\+bs}}
 \index{matrix\+\_\+bs@{matrix\+\_\+bs}!matrix.\+h@{matrix.\+h}}
@@ -115,7 +115,32 @@ Matrix creation, algebra and decompositions.
 
 Solves an upper triangular system of equations using the backward substitution algorithm. 
 
-This function operates analogously to {\ttfamily matrix\+\_\+fs}, except this algorithm can be used to solve systems $Ax = b$ where $A$ is upper triangular. \mbox{\Hypertarget{matrix_8h_abad97daa1b997561d7568a06b213d0ff}\label{matrix_8h_abad97daa1b997561d7568a06b213d0ff}} 
+This function operates analogously to {\ttfamily matrix\+\_\+fs}, except this algorithm can be used to solve systems $Ax = b$ where $A$ is upper triangular. \mbox{\Hypertarget{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}\label{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+create@{matrix\+\_\+create}}
+\index{matrix\+\_\+create@{matrix\+\_\+create}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+create()}{matrix\_create()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+create (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{m,  }\item[{uint64\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Initialises a new matrix with {\ttfamily m} rows and {\ttfamily n} columns. 
+
+This function initialises an $m \times n$ zero matrix, allocating space for it on the heap and returning a pointer to the newly created matrix.
+
+\begin{DoxyWarning}{Warning}
+When you no longer require the matrix, you must use {\ttfamily matrix\+\_\+destroy} in order to free the memory used by the matrix. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{matrix_8h_a110a8bfee13e6a39f2cc20d83641a4c6}\label{matrix_8h_a110a8bfee13e6a39f2cc20d83641a4c6}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+destroy@{matrix\+\_\+destroy}}
+\index{matrix\+\_\+destroy@{matrix\+\_\+destroy}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+destroy()}{matrix\_destroy()}}
+{\footnotesize\ttfamily void matrix\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A }\end{DoxyParamCaption})}
+
+
+
+Frees the memory used by the matrix {\ttfamily A}. 
+
+This function frees the array of doubles used to store the elements of the matrix and then frees the matrix structure itself. \mbox{\Hypertarget{matrix_8h_abad97daa1b997561d7568a06b213d0ff}\label{matrix_8h_abad97daa1b997561d7568a06b213d0ff}} 
 \index{matrix.\+h@{matrix.\+h}!matrix\+\_\+fs@{matrix\+\_\+fs}}
 \index{matrix\+\_\+fs@{matrix\+\_\+fs}!matrix.\+h@{matrix.\+h}}
 \subsubsection{\texorpdfstring{matrix\+\_\+fs()}{matrix\_fs()}}
@@ -131,10 +156,161 @@ Takes a lower triangular $n \times n$ matrix {\ttfamily A} and a vector {\bfseri
 
 Example\+: suppose we wish to solve the system $\begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}x = (1, 0)^T$. The following code will use forward substitution to solve this system. 
 \begin{DoxyCode}
-\hyperlink{structmatrix}{matrix\_t}* A = matrix\_id(2);
-matrix\_set(A, 1, 0, 2.0);
-\hyperlink{structmatrix}{matrix\_t}* b = matrix\_create(2, 1);
-matrix\_set(b, 0, 0, 1.0);
+\hyperlink{structmatrix}{matrix\_t}* A = \hyperlink{matrix_8h_a516702d69391115390dadfd82a239a5e}{matrix\_id}(2);
+\hyperlink{matrix_8h_ae3cb5d540d01a2435c147b0c08301609}{matrix\_set}(A, 1, 0, 2.0);
+\hyperlink{structmatrix}{matrix\_t}* b = \hyperlink{matrix_8h_a6b678ba2f6002bc59f4703abaf5a9fb5}{matrix\_create}(2, 1);
+\hyperlink{matrix_8h_ae3cb5d540d01a2435c147b0c08301609}{matrix\_set}(b, 0, 0, 1.0);
 \hyperlink{structmatrix}{matrix\_t}* x = \hyperlink{matrix_8h_abad97daa1b997561d7568a06b213d0ff}{matrix\_fs}(A, b);
 \end{DoxyCode}
- 
+ \mbox{\Hypertarget{matrix_8h_afc259d420e7a3d29baca39bf24d96a3a}\label{matrix_8h_afc259d420e7a3d29baca39bf24d96a3a}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+ge@{matrix\+\_\+ge}}
+\index{matrix\+\_\+ge@{matrix\+\_\+ge}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+ge()}{matrix\_ge()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+ge (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Solves a system of linear equations $Ax = b$ using Gaussian elimination (without pivoting). 
+
+Given an $n \times n$ matrix {\ttfamily A} and a $n \times 1$ matrix {\ttfamily b} representing a vector, this function uses Gaussian elimination to find a vector $x$ such that $Ax = b$.
+
+The Gaussian elimination algorithm consists of taking the LU decomposition of A, then using backward and forward substitution because we then obtain lower and upper triangular matrices that we can solve to obtain x.
+
+\begin{DoxyWarning}{Warning}
+As this matrix uses the LU decomposition algorithm (without pivoting), we require all the {\itshape principal submatrices}, i.\+e. the submatrix consisting of the first j rows and columns, to be non-\/singular for j = 1 to n. Failing to verify this will result in the LU decomposition algorithm producing errors. This function does {\bfseries not} check that the condition is satisfied. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{matrix_8h_a7479f97763962d4ba0735012eafb3c21}\label{matrix_8h_a7479f97763962d4ba0735012eafb3c21}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+gepp@{matrix\+\_\+gepp}}
+\index{matrix\+\_\+gepp@{matrix\+\_\+gepp}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+gepp()}{matrix\_gepp()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+gepp (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Solves a system of linear equations $Ax = b$ using Gaussian elimination (with pivoting). 
+
+For an explanation of the Gaussian elimination algorithm, see {\ttfamily matrix\+\_\+ge}. Instead of using LU factorisation without pivoting, this method uses the LU factorisation with \char`\"{}partial pivoting\char`\"{}. This algorithm is designed to deal with small or zero diagonal elements (called pivots). The algorithm must divide by the pivots, so small or zero pivots lead to significant numerical instabiliy.
+
+The pivoting looks for a permutation matrix $P$ to maximise the pivot element by permuting rows, and then calculates the LU decomposition of $PA$. \mbox{\Hypertarget{matrix_8h_a362034b93f4ec6d1b7c5b464017993d4}\label{matrix_8h_a362034b93f4ec6d1b7c5b464017993d4}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+get@{matrix\+\_\+get}}
+\index{matrix\+\_\+get@{matrix\+\_\+get}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+get()}{matrix\_get()}}
+{\footnotesize\ttfamily double matrix\+\_\+get (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{uint64\+\_\+t}]{i,  }\item[{uint64\+\_\+t}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesses the element ({\ttfamily i}, {\ttfamily j}) from the matrix {\ttfamily A}, where {\ttfamily i} accesses the (i + 1)th row and {\ttfamily j} accesses the (j + 1)th column. 
+
+\begin{DoxyWarning}{Warning}
+In contrast to the mathematical notation $a_{11}$ as the first element of the matrix, we denote the top left element by the index (0, 0), and the bottom right by (m -\/ 1, n -\/ 1) in an m x n matrix. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{matrix_8h_a516702d69391115390dadfd82a239a5e}\label{matrix_8h_a516702d69391115390dadfd82a239a5e}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+id@{matrix\+\_\+id}}
+\index{matrix\+\_\+id@{matrix\+\_\+id}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+id()}{matrix\_id()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Creates a new identity matrix of dimension {\ttfamily n}. 
+
+This function allocates a new matrix that is equal to the identity matrix $I_n$ with 1 on the diagonal and zero elsewhere. As with {\ttfamily matrix\+\_\+create}, you must destroy this manually using {\ttfamily matrix\+\_\+destroy} after usage. \mbox{\Hypertarget{matrix_8h_a7ae8ac488523c525ecb0c4587c8ca9ba}\label{matrix_8h_a7ae8ac488523c525ecb0c4587c8ca9ba}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+jacobi@{matrix\+\_\+jacobi}}
+\index{matrix\+\_\+jacobi@{matrix\+\_\+jacobi}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+jacobi()}{matrix\_jacobi()}}
+{\footnotesize\ttfamily double matrix\+\_\+jacobi (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{b,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$$\ast$}]{x,  }\item[{double}]{tol }\end{DoxyParamCaption})}
+
+
+
+Iteratively solves the system $Ax = b$ where {\ttfamily A} satisfies certain convergence criteria. 
+
+In contrast to {\ttfamily matrix\+\_\+ge} and related functions, this is an iterative solver to find the solution to a system of linear equations.
+
+As this is an iterative solver, a tolerance {\ttfamily tol} must be passed which sets when to stop\+: when the residual $\lVert Ax - b \rVert $ is less than {\ttfamily tol}, we terminate.
+
+This function will never iterate more than M\+A\+X\+\_\+\+I\+T\+ER times as defined in {\ttfamily matrix.\+c} to prevent infinite looping if the process does not converge.
+
+\begin{DoxyReturn}{Returns}
+The 2-\/norm of the residual $Ax - b$ for the vector {\ttfamily x} which stores the solution found.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+The iterative method will only converge if certain criteria are satisified by {\ttfamily A}. If these are not satisfied, the iterations may never converge to the true value. The following are sufficient conditions for the convergence of the Jacobi method\+:
+\begin{DoxyItemize}
+\item the \textquotesingle{}strong row sum\textquotesingle{} criterion, $|a_{ii}| > \sum_{j \neq i} |a_{ij}|$ for all $i$
+\item the \textquotesingle{}strong column sum\textquotesingle{} criterion, formulated analogously to above,
+\item irreducibility and the \textquotesingle{}weak row sum\textquotesingle{} criterion $|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and $$\vert$a\+\_\+\{kk\}$\vert$ $>$ \{j  k\} $\vert$a\+\_\+\{kj\}$\vert$ for some row k. 
+\end{DoxyItemize}
+\end{DoxyWarning}
+\mbox{\Hypertarget{matrix_8h_a76d3cc678126c9e254c3f2292eea9937}\label{matrix_8h_a76d3cc678126c9e254c3f2292eea9937}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+lsq@{matrix\+\_\+lsq}}
+\index{matrix\+\_\+lsq@{matrix\+\_\+lsq}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+lsq()}{matrix\_lsq()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+lsq (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Finds a vector x minimising the function $\frac12 \lVert Ax - b \rVert^2$. 
+
+This function can be used to obtain a minimiser of the function $g(x) = \frac12 \lVert Ax - b \rVert^2$ given an $m \times n$ matrix {\ttfamily A} and a $m \times 1$ matrix {\ttfamily b}. These problems are known as {\bfseries least squares problems}.
+
+Internally, this function calculates the reduced QR factorisation of {\ttfamily A} and then solves the system using backward substitution.
+
+\begin{DoxyWarning}{Warning}
+We require {\ttfamily A} to be of full rank or else the solution is not uniquely determined to the least squares problem. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{matrix_8h_a681fe0383775d33134e7d1f9455ba3bb}\label{matrix_8h_a681fe0383775d33134e7d1f9455ba3bb}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+lu@{matrix\+\_\+lu}}
+\index{matrix\+\_\+lu@{matrix\+\_\+lu}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+lu()}{matrix\_lu()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+lu (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{U }\end{DoxyParamCaption})}
+
+
+
+Computes the LU decomposition of the given matrix. 
+
+See also {\ttfamily matrix\+\_\+ge} for discussion of this function. This performs the LU decomposition algorithm without any pivoting.
+
+\begin{DoxyReturn}{Returns}
+A unit lower triangular matrix (i.\+e. a matrix with 1 on the diagonal and zero above). The upper triangular matrix will be stored in the matrix passed to the function.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This algorithm requires that {\ttfamily U} has all {\itshape principal submatrices} non-\/singular, as described in {\ttfamily matrix\+\_\+ge}. You must be sure of this before running the algorithm. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{matrix_8h_aac9651131ce6bace790b4eb79f715817}\label{matrix_8h_aac9651131ce6bace790b4eb79f715817}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+lupp@{matrix\+\_\+lupp}}
+\index{matrix\+\_\+lupp@{matrix\+\_\+lupp}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+lupp()}{matrix\_lupp()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix__lup}{matrix\+\_\+lup\+\_\+t}$\ast$ matrix\+\_\+lupp (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{U }\end{DoxyParamCaption})}
+
+
+
+Computes the LU decomposition algorithm (with partial pivoting of rows). 
+
+Analogously to {\ttfamily matrix\+\_\+lu}, this function can be used to find matrices $L$ and $U$, where $L$ is unit lower triangular and $U$ is upper triangular.
+
+In contrast to {\ttfamily matrix\+\_\+lu}, this function also finds a permutation matrix $P$ such that $PA = LU$. This approach has the advantage of being able to work with matrices not satisfying the non-\/singular submatrix criterion. As discussed in {\ttfamily matrix\+\_\+gepp}, pivoting the rows of the matrix prevents numerical instability for small (or zero) pivot elements. \begin{DoxyReturn}{Returns}
+A structure containing the matrices L and P. The upper triangular matrix is stored in the argument passed to the function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{matrix_8h_a71c77b30fb0aa235b17a6137ca9a22aa}\label{matrix_8h_a71c77b30fb0aa235b17a6137ca9a22aa}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+mul@{matrix\+\_\+mul}}
+\index{matrix\+\_\+mul@{matrix\+\_\+mul}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+mul()}{matrix\_mul()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+mul (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A,  }\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Creates a new matrix equal to the product of {\ttfamily A} and {\ttfamily B}. 
+
+The matrices must be of compatible dimension, so if $A$ is an $m \times n$ matrix, then $B$ must be a $n \times p$ matrix and the function will return a newly allocated $m \times p$ matrix.
+
+Unlike the {\ttfamily matrix\+\_\+add} function, this function allocates a new matrix because, unless {\ttfamily A} and {\ttfamily B} are square, the product matrix will not be of the same dimension as {\ttfamily A} or {\ttfamily B}. \mbox{\Hypertarget{matrix_8h_ad7b763efbb57ab953f9e4b6ed8c9bd90}\label{matrix_8h_ad7b763efbb57ab953f9e4b6ed8c9bd90}} 
+\index{matrix.\+h@{matrix.\+h}!matrix\+\_\+transpose@{matrix\+\_\+transpose}}
+\index{matrix\+\_\+transpose@{matrix\+\_\+transpose}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix\+\_\+transpose()}{matrix\_transpose()}}
+{\footnotesize\ttfamily \hyperlink{structmatrix}{matrix\+\_\+t}$\ast$ matrix\+\_\+transpose (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix}{matrix\+\_\+t} $\ast$}]{A }\end{DoxyParamCaption})}
+
+
+
+Creates a new matrix equal to the transpose of {\ttfamily A}. 
+
+The transpose of an $ m \times n $ matrix is an $ n \times m $ matrix where $ a_{ij} = b_{ji} $ where $ b_{ij} $ are the elements of the transpose matrix. 
