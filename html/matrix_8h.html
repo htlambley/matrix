@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -125,10 +131,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <tr class="memdesc:a7105309534bc7d6560bd5de5d739b686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an upper triangular system of equations using the backward substitution algorithm.  <a href="#a7105309534bc7d6560bd5de5d739b686">More...</a><br /></td></tr>
 <tr class="separator:a7105309534bc7d6560bd5de5d739b686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc259d420e7a3d29baca39bf24d96a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#afc259d420e7a3d29baca39bf24d96a3a">matrix_ge</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
-<tr class="memdesc:afc259d420e7a3d29baca39bf24d96a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (without pivoting).  <a href="#afc259d420e7a3d29baca39bf24d96a3a">More...</a><br /></td></tr>
+<tr class="memdesc:afc259d420e7a3d29baca39bf24d96a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations \(Ax = b\) using Gaussian elimination (without pivoting).  <a href="#afc259d420e7a3d29baca39bf24d96a3a">More...</a><br /></td></tr>
 <tr class="separator:afc259d420e7a3d29baca39bf24d96a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7479f97763962d4ba0735012eafb3c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7479f97763962d4ba0735012eafb3c21">matrix_gepp</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
-<tr class="memdesc:a7479f97763962d4ba0735012eafb3c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (with pivoting).  <a href="#a7479f97763962d4ba0735012eafb3c21">More...</a><br /></td></tr>
+<tr class="memdesc:a7479f97763962d4ba0735012eafb3c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations \(Ax = b\) using Gaussian elimination (with pivoting).  <a href="#a7479f97763962d4ba0735012eafb3c21">More...</a><br /></td></tr>
 <tr class="separator:a7479f97763962d4ba0735012eafb3c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a> (uint64_t m, uint64_t n)</td></tr>
 <tr class="memdesc:a6b678ba2f6002bc59f4703abaf5a9fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises a new matrix with <code>m</code> rows and <code>n</code> columns.  <a href="#a6b678ba2f6002bc59f4703abaf5a9fb5">More...</a><br /></td></tr>
@@ -173,10 +179,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <tr class="memdesc:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory used by the matrix <code>A</code>.  <a href="#a110a8bfee13e6a39f2cc20d83641a4c6">More...</a><br /></td></tr>
 <tr class="separator:a110a8bfee13e6a39f2cc20d83641a4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76d3cc678126c9e254c3f2292eea9937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a76d3cc678126c9e254c3f2292eea9937">matrix_lsq</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b)</td></tr>
-<tr class="memdesc:a76d3cc678126c9e254c3f2292eea9937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_25.png"/>.  <a href="#a76d3cc678126c9e254c3f2292eea9937">More...</a><br /></td></tr>
+<tr class="memdesc:a76d3cc678126c9e254c3f2292eea9937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a vector x minimising the function \(\frac12 \lVert Ax - b \rVert^2\).  <a href="#a76d3cc678126c9e254c3f2292eea9937">More...</a><br /></td></tr>
 <tr class="separator:a76d3cc678126c9e254c3f2292eea9937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7ae8ac488523c525ecb0c4587c8ca9ba">matrix_jacobi</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b, <a class="el" href="structmatrix.html">matrix_t</a> **x, double tol)</td></tr>
-<tr class="memdesc:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively solves the system <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <code>A</code> satisfies certain convergence criteria.  <a href="#a7ae8ac488523c525ecb0c4587c8ca9ba">More...</a><br /></td></tr>
+<tr class="memdesc:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively solves the system \(Ax = b\) where <code>A</code> satisfies certain convergence criteria.  <a href="#a7ae8ac488523c525ecb0c4587c8ca9ba">More...</a><br /></td></tr>
 <tr class="separator:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -240,7 +246,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Solves an upper triangular system of equations using the backward substitution algorithm. </p>
-<p>This function operates analogously to <code>matrix_fs</code>, except this algorithm can be used to solve systems <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <img class="formulaInl" alt="$A$" src="form_8.png"/> is upper triangular. </p>
+<p>This function operates analogously to <code>matrix_fs</code>, except this algorithm can be used to solve systems \(Ax = b\) where \(A\) is upper triangular. </p>
 
 </div>
 </div>
@@ -271,7 +277,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Initialises a new matrix with <code>m</code> rows and <code>n</code> columns. </p>
-<p>This function initialises an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> zero matrix, allocating space for it on the heap and returning a pointer to the newly created matrix.</p>
+<p>This function initialises an \(m \times n\) zero matrix, allocating space for it on the heap and returning a pointer to the newly created matrix.</p>
 <dl class="section warning"><dt>Warning</dt><dd>When you no longer require the matrix, you must use <code>matrix_destroy</code> in order to free the memory used by the matrix. </dd></dl>
 
 </div>
@@ -324,9 +330,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Solves a lower triangular system of equations using the forward substitution algorithm. </p>
-<p>This function can be used to solve systems of linear equations where the matrix <img class="formulaInl" alt="$L$" src="form_0.png"/> is a (square) lower triangular matrix and we wish to find <img class="formulaInl" alt="$x$" src="form_1.png"/> such that <img class="formulaInl" alt="$Lx = b$" src="form_2.png"/>.</p>
-<p>Takes a lower triangular <img class="formulaInl" alt="$n \times n$" src="form_3.png"/> matrix <code>A</code> and a vector <b></b>(represented as a <img class="formulaInl" alt="$ n \times 1 $" src="form_4.png"/> matrix) and returns a newly allocated <img class="formulaInl" alt="$n \times 1$" src="form_5.png"/> matrix <code>x</code> such that <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/>.</p>
-<p>Example: suppose we wish to solve the system <img class="formulaInl" alt="$\begin{pmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{pmatrix}x = (1, 0)^T$" src="form_7.png"/>. The following code will use forward substitution to solve this system. </p><div class="fragment"><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* A = <a class="code" href="matrix_8h.html#a516702d69391115390dadfd82a239a5e">matrix_id</a>(2);</div><div class="line">matrix_set(A, 1, 0, 2.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* b = <a class="code" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a>(2, 1);</div><div class="line">matrix_set(b, 0, 0, 1.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* x = <a class="code" href="matrix_8h.html#abad97daa1b997561d7568a06b213d0ff">matrix_fs</a>(A, b);</div></div><!-- fragment --> 
+<p>This function can be used to solve systems of linear equations where the matrix \(L\) is a (square) lower triangular matrix and we wish to find \(x\) such that \(Lx = b\).</p>
+<p>Takes a lower triangular \(n \times n\) matrix <code>A</code> and a vector <b></b>(represented as a \( n \times 1 \) matrix) and returns a newly allocated \(n \times 1\) matrix <code>x</code> such that \(Ax = b\).</p>
+<p>Example: suppose we wish to solve the system \(Ax = (1, 0)^T\), where A = [1, 0; 2, 1]. The following code will use forward substitution to solve this system. </p><div class="fragment"><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* A = <a class="code" href="matrix_8h.html#a516702d69391115390dadfd82a239a5e">matrix_id</a>(2);</div><div class="line">matrix_set(A, 1, 0, 2.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* b = <a class="code" href="matrix_8h.html#a6b678ba2f6002bc59f4703abaf5a9fb5">matrix_create</a>(2, 1);</div><div class="line">matrix_set(b, 0, 0, 1.0);</div><div class="line"><a class="code" href="structmatrix.html">matrix_t</a>* x = <a class="code" href="matrix_8h.html#abad97daa1b997561d7568a06b213d0ff">matrix_fs</a>(A, b);</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="afc259d420e7a3d29baca39bf24d96a3a"></a>
@@ -355,8 +361,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
       </table>
 </div><div class="memdoc">
 
-<p>Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (without pivoting). </p>
-<p>Given an <img class="formulaInl" alt="$n \times n$" src="form_3.png"/> matrix <code>A</code> and a <img class="formulaInl" alt="$n \times 1$" src="form_5.png"/> matrix <code>b</code> representing a vector, this function uses Gaussian elimination to find a vector <img class="formulaInl" alt="$x$" src="form_1.png"/> such that <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/>.</p>
+<p>Solves a system of linear equations \(Ax = b\) using Gaussian elimination (without pivoting). </p>
+<p>Given an \(n \times n\) matrix <code>A</code> and a \(n \times 1\) matrix <code>b</code> representing a vector, this function uses Gaussian elimination to find a vector \(x\) such that \(Ax = b\).</p>
 <p>The Gaussian elimination algorithm consists of taking the LU decomposition of A, then using backward and forward substitution because we then obtain lower and upper triangular matrices that we can solve to obtain x.</p>
 <dl class="section warning"><dt>Warning</dt><dd>As this matrix uses the LU decomposition algorithm (without pivoting), we require all the <em>principal submatrices</em>, i.e. the submatrix consisting of the first j rows and columns, to be non-singular for j = 1 to n. Failing to verify this will result in the LU decomposition algorithm producing errors. This function does <b>not</b> check that the condition is satisfied. </dd></dl>
 
@@ -388,9 +394,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
       </table>
 </div><div class="memdoc">
 
-<p>Solves a system of linear equations <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> using Gaussian elimination (with pivoting). </p>
+<p>Solves a system of linear equations \(Ax = b\) using Gaussian elimination (with pivoting). </p>
 <p>For an explanation of the Gaussian elimination algorithm, see <code>matrix_ge</code>. Instead of using LU factorisation without pivoting, this method uses the LU factorisation with "partial pivoting". This algorithm is designed to deal with small or zero diagonal elements (called pivots). The algorithm must divide by the pivots, so small or zero pivots lead to significant numerical instabiliy.</p>
-<p>The pivoting looks for a permutation matrix <img class="formulaInl" alt="$P$" src="form_9.png"/> to maximise the pivot element by permuting rows, and then calculates the LU decomposition of <img class="formulaInl" alt="$PA$" src="form_10.png"/>. </p>
+<p>The pivoting looks for a permutation matrix \(P\) to maximise the pivot element by permuting rows, and then calculates the LU decomposition of \(PA\). </p>
 
 </div>
 </div>
@@ -411,7 +417,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Computes the Householder reflection with normal vector <code>v</code>. </p>
-<p>This function creates a new matrix <img class="formulaInl" alt="$ H = I_n - 2 v v^T $" src="form_19.png"/> which is called a <em>Householder reflection</em>. This is a reflection by the hyperplane normal to <code>v</code>, which should be given as an <img class="formulaInl" alt="$ n \times 1$" src="form_20.png"/> matrix. </p>
+<p>This function creates a new matrix \( H = I_n - 2 v v^T \) which is called a <em>Householder reflection</em>. This is a reflection by the hyperplane normal to <code>v</code>, which should be given as an \( n \times 1\) matrix. </p>
 
 </div>
 </div>
@@ -432,7 +438,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Creates a new identity matrix of dimension <code>n</code>. </p>
-<p>This function allocates a new matrix that is equal to the identity matrix <img class="formulaInl" alt="$I_n$" src="form_13.png"/> with 1 on the diagonal and zero elsewhere. As with <code>matrix_create</code>, you must destroy this manually using <code>matrix_destroy</code> after usage. </p>
+<p>This function allocates a new matrix that is equal to the identity matrix \(I_n\) with 1 on the diagonal and zero elsewhere. As with <code>matrix_create</code>, you must destroy this manually using <code>matrix_destroy</code> after usage. </p>
 
 </div>
 </div>
@@ -474,15 +480,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
       </table>
 </div><div class="memdoc">
 
-<p>Iteratively solves the system <img class="formulaInl" alt="$Ax = b$" src="form_6.png"/> where <code>A</code> satisfies certain convergence criteria. </p>
+<p>Iteratively solves the system \(Ax = b\) where <code>A</code> satisfies certain convergence criteria. </p>
 <p>In contrast to <code>matrix_ge</code> and related functions, this is an iterative solver to find the solution to a system of linear equations.</p>
-<p>As this is an iterative solver, a tolerance <code>tol</code> must be passed which sets when to stop: when the residual <img class="formulaInl" alt="$\lVert Ax - b \rVert $" src="form_28.png"/> is less than <code>tol</code>, we terminate.</p>
+<p>As this is an iterative solver, a tolerance <code>tol</code> must be passed which sets when to stop: when the residual \(\lVert Ax - b \rVert \) is less than <code>tol</code>, we terminate.</p>
 <p>This function will never iterate more than MAX_ITER times as defined in <code>matrix.c</code> to prevent infinite looping if the process does not converge.</p>
-<dl class="section return"><dt>Returns</dt><dd>The 2-norm of the residual <img class="formulaInl" alt="$Ax - b$" src="form_29.png"/> for the vector <code>x</code> which stores the solution found.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The 2-norm of the residual \(Ax - b\) for the vector <code>x</code> which stores the solution found.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The iterative method will only converge if certain criteria are satisified by <code>A</code>. If these are not satisfied, the iterations may never converge to the true value. The following are sufficient conditions for the convergence of the Jacobi method:<ul>
-<li>the 'strong row sum' criterion, <img class="formulaInl" alt="$|a_{ii}| &gt; \sum_{j \neq i} |a_{ij}|$" src="form_30.png"/> for all <img class="formulaInl" alt="$i$" src="form_31.png"/></li>
+<li>the 'strong row sum' criterion, \(|a_{ii}| &gt; \sum_{j \neq i} |a_{ij}|\) for all \(i\)</li>
 <li>the 'strong column sum' criterion, formulated analogously to above,</li>
-<li>irreducibility and the 'weak row sum' criterion <img class="formulaInl" alt="$|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and $" src="form_32.png"/>|a_{kk}| &gt; {j  k} |a_{kj}| for some row k. </li>
+<li>irreducibility and the 'weak row sum' criterion \(|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and \)|a_{kk}| &gt; {j  k} |a_{kj}| for some row k. </li>
 </ul>
 </dd></dl>
 
@@ -514,8 +520,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
       </table>
 </div><div class="memdoc">
 
-<p>Finds a vector x minimising the function <img class="formulaInl" alt="$\frac12 \lVert Ax - b \rVert^2$" src="form_25.png"/>. </p>
-<p>This function can be used to obtain a minimiser of the function <img class="formulaInl" alt="$g(x) = \frac12 \lVert Ax - b \rVert^2$" src="form_26.png"/> given an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> matrix <code>A</code> and a <img class="formulaInl" alt="$m \times 1$" src="form_27.png"/> matrix <code>b</code>. These problems are known as <b>least squares problems</b>.</p>
+<p>Finds a vector x minimising the function \(\frac12 \lVert Ax - b \rVert^2\). </p>
+<p>This function can be used to obtain a minimiser of the function \(g(x) = \frac12 \lVert Ax - b \rVert^2\) given an \(m \times n\) matrix <code>A</code> and a \(m \times 1\) matrix <code>b</code>. These problems are known as <b>least squares problems</b>.</p>
 <p>Internally, this function calculates the reduced QR factorisation of <code>A</code> and then solves the system using backward substitution.</p>
 <dl class="section warning"><dt>Warning</dt><dd>We require <code>A</code> to be of full rank or else the solution is not uniquely determined to the least squares problem. </dd></dl>
 
@@ -561,8 +567,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Computes the LU decomposition algorithm (with partial pivoting of rows). </p>
-<p>Analogously to <code>matrix_lu</code>, this function can be used to find matrices <img class="formulaInl" alt="$L$" src="form_0.png"/> and <img class="formulaInl" alt="$U$" src="form_17.png"/>, where <img class="formulaInl" alt="$L$" src="form_0.png"/> is unit lower triangular and <img class="formulaInl" alt="$U$" src="form_17.png"/> is upper triangular.</p>
-<p>In contrast to <code>matrix_lu</code>, this function also finds a permutation matrix <img class="formulaInl" alt="$P$" src="form_9.png"/> such that <img class="formulaInl" alt="$PA = LU$" src="form_18.png"/>. This approach has the advantage of being able to work with matrices not satisfying the non-singular submatrix criterion. As discussed in <code>matrix_gepp</code>, pivoting the rows of the matrix prevents numerical instability for small (or zero) pivot elements. </p><dl class="section return"><dt>Returns</dt><dd>A structure containing the matrices L and P. The upper triangular matrix is stored in the argument passed to the function. </dd></dl>
+<p>Analogously to <code>matrix_lu</code>, this function can be used to find matrices \(L\) and \(U\), where \(L\) is unit lower triangular and \(U\) is upper triangular.</p>
+<p>In contrast to <code>matrix_lu</code>, this function also finds a permutation matrix \(P\) such that \(PA = LU\). This approach has the advantage of being able to work with matrices not satisfying the non-singular submatrix criterion. As discussed in <code>matrix_gepp</code>, pivoting the rows of the matrix prevents numerical instability for small (or zero) pivot elements. </p><dl class="section return"><dt>Returns</dt><dd>A structure containing the matrices L and P. The upper triangular matrix is stored in the argument passed to the function. </dd></dl>
 
 </div>
 </div>
@@ -593,7 +599,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Creates a new matrix equal to the product of <code>A</code> and <code>B</code>. </p>
-<p>The matrices must be of compatible dimension, so if <img class="formulaInl" alt="$A$" src="form_8.png"/> is an <img class="formulaInl" alt="$m \times n$" src="form_11.png"/> matrix, then <img class="formulaInl" alt="$B$" src="form_14.png"/> must be a <img class="formulaInl" alt="$n \times p$" src="form_15.png"/> matrix and the function will return a newly allocated <img class="formulaInl" alt="$m \times p$" src="form_16.png"/> matrix.</p>
+<p>The matrices must be of compatible dimension, so if \(A\) is an \(m \times n\) matrix, then \(B\) must be a \(n \times p\) matrix and the function will return a newly allocated \(m \times p\) matrix.</p>
 <p>Unlike the <code>matrix_add</code> function, this function allocates a new matrix because, unless <code>A</code> and <code>B</code> are square, the product matrix will not be of the same dimension as <code>A</code> or <code>B</code>. </p>
 
 </div>
@@ -637,7 +643,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 </div><div class="memdoc">
 
 <p>Creates a new matrix equal to the transpose of <code>A</code>. </p>
-<p>The transpose of an <img class="formulaInl" alt="$ m \times n $" src="form_21.png"/> matrix is an <img class="formulaInl" alt="$ n \times m $" src="form_22.png"/> matrix where <img class="formulaInl" alt="$ a_{ij} = b_{ji} $" src="form_23.png"/> where <img class="formulaInl" alt="$ b_{ij} $" src="form_24.png"/> are the elements of the transpose matrix. </p>
+<p>The transpose of an \( m \times n \) matrix is an \( n \times m \) matrix where \( a_{ij} = b_{ji} \) where \( b_{ij} \) are the elements of the transpose matrix. </p>
 
 </div>
 </div>

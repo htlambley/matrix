@@ -68,7 +68,7 @@ bool matrix_diagonal(matrix_t* A);
  * (represented as a \f$ n \times 1 \f$ matrix) and returns a newly allocated
  * \f$n \times 1\f$ matrix <tt>x</tt> such that \f$Ax = b\f$.
  *
- * Example: suppose we wish to solve the system \f$\begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}x = (1, 0)^T\f$. The following code will use forward substitution to solve this system.
+ * Example: suppose we wish to solve the system \f$Ax = (1, 0)^T\f$, where A = [1, 0; 2, 1]. The following code will use forward substitution to solve this system.
  * @code
  * matrix_t* A = matrix_id(2);
  * matrix_set(A, 1, 0, 2.0);
