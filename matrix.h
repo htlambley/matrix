@@ -304,8 +304,8 @@ matrix_t* matrix_lsq(matrix_t* A, matrix_t* b);
  *   \f$|a_{ii}| > \sum_{j \neq i} |a_{ij}|\f$ for all \f$i\f$
  * - the 'strong column sum' criterion, formulated analogously to above,
  * - irreducibility and the 'weak row sum' criterion
- * \f$|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and
- * \f$|a_{kk}| > \sum_{j \neq k} |a_{kj}| for some row k.
+ * \f$|a_{ii}| \geq \sum_{j \neq i} |a_{ij}|\f$ for all i, and
+ * \f$|a_{kk}| > \sum_{j \neq k} |a_{kj}|\f$ for some row k.
  */
 double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol);
 
