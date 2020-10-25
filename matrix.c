@@ -7,6 +7,7 @@
 #include "matrix.h"
 
 #define EPSILON 1e-6
+#define MAX_ITER 10000
 
 bool approx_equal(double x, double y, double eps) {
     return fabs(x - y) < eps;
@@ -465,6 +466,7 @@ double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol) {
     } 
 
     double err = 0.0;
+    uint64_t iter = 0;
     do {
 	matrix_t* x_old = *x;
 	// At each iteration, x_k = D^{-1} (b - (L + U)x_{k - 1}).
@@ -486,8 +488,8 @@ double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol) {
 	matrix_destroy(x_old);
 	matrix_destroy(r_k);
 	*x = x_k;
-	printf("%f", err);
-    } while (err > tol);
+	iter++;
+    } while (err > tol && iter < MAX_ITER);
     matrix_destroy(D_inv);
     return err;
 }

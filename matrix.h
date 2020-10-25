@@ -43,7 +43,9 @@ struct matrix_qr {
 typedef struct matrix_lup matrix_lup_t;
 typedef struct matrix_qr matrix_qr_t;
 
-
+/**
+ * @brief Tests whether a matrix @p A is lower triangular. 
+ */
 bool matrix_lower_triangular(matrix_t* A); 
 bool matrix_upper_triangular(matrix_t* A);
 bool matrix_diagonal(matrix_t* A);
@@ -127,23 +129,150 @@ matrix_t* matrix_gepp(matrix_t* A, matrix_t* b);
  */
 matrix_t* matrix_create(uint64_t m, uint64_t n);
 /**
- * @brief Accesses the element (@p i, @p j) from the matrix @p A.
+ * @brief Accesses the element (@p i, @p j) from the matrix @p A,
+ * where @p i accesses the (i + 1)th row and @p j accesses the (j + 1)th
+ * column.
+ * 
+ * @warning In contrast to the mathematical notation \f$a_{11}\f$ as the
+ * first element of the matrix, we denote the top left element by the index
+ * (0, 0), and the bottom right by (m - 1, n - 1) in an m x n matrix. 
  */
 inline double matrix_get(matrix_t* A, uint64_t i, uint64_t j);
 /**
  * @brief Sets the element (@p i, @p j) in the matrix @p A to @p value.
  */
 inline void matrix_set(matrix_t* A, uint64_t i, uint64_t j, double value);
+/**
+ * @brief Adds the matrices @p A and @p B, storing the result in the matrix
+ * @p A. 
+ *
+ * @warning Note carefully that this will overwrite what is stored in the
+ * matrix @p A, and leave @p B unchanged. This is to avoid allocating another
+ * matrix unnecessarily. If you need to keep the original @p A, allocate a
+ * copy using <tt>matrix_clone</tt>.
+ */
 void matrix_add(matrix_t* A, matrix_t* B);
+/**
+ * @brief Creates a new identity matrix of dimension @p n.
+ *
+ * This function allocates a new matrix that is equal to the identity
+ * matrix \f$I_n\f$ with 1 on the diagonal and zero elsewhere. As
+ * with <tt>matrix_create</tt>, you must destroy this manually using
+ * <tt>matrix_destroy</tt> after usage.
+ */
 matrix_t* matrix_id(uint64_t n);
+/**
+ * @brief Creates a new matrix equal to the product of @p A and @p B.
+ *
+ * The matrices must be of compatible dimension, so if \f$A\f$ is an
+ * \f$m \times n\f$ matrix, then \f$B\f$ must be a \f$n \times p\f$ matrix
+ * and the function will return a newly allocated \f$m \times p\f$ matrix.
+ * 
+ * Unlike the <tt>matrix_add</tt> function, this function allocates a new
+ * matrix because, unless @p A and @p B are square, the product matrix will
+ * not be of the same dimension as @p A or @p B.
+ */
 matrix_t* matrix_mul(matrix_t* A, matrix_t* B);
+/**
+ * @brief Computes the LU decomposition of the given matrix.
+ *
+ * See also <tt>matrix_ge</tt> for discussion of this function. This
+ * performs the LU decomposition algorithm without any pivoting. 
+ *
+ * @returns A unit lower triangular matrix (i.e. a matrix with 1 on the
+ * diagonal and zero above). The upper triangular matrix will be stored in the
+ * matrix passed to the function.
+ *
+ * @warning This algorithm requires that @p U has all <i>principal 
+ * submatrices</i> non-singular, as described in <tt>matrix_ge</tt>.
+ * You must be sure of this before running the algorithm.
+ */
 matrix_t* matrix_lu(matrix_t* U);
+/**
+ * @brief Computes the LU decomposition algorithm (with partial pivoting of
+ * rows).
+ *
+ * Analogously to <tt>matrix_lu</tt>, this function can be used to find matrices
+ * \f$L\f$ and \f$U\f$, where \f$L\f$ is unit lower triangular and \f$U\f$ is
+ * upper triangular.
+ *
+ * In contrast to <tt>matrix_lu</tt>, this function also finds a permutation 
+ * matrix \f$P\f$ such that \f$PA = LU\f$. This approach has the advantage of
+ * being able to work with matrices not satisfying the non-singular submatrix
+ * criterion. As discussed in <tt>matrix_gepp</tt>, pivoting the rows of the
+ * matrix prevents numerical instability for small (or zero) pivot elements.
+ * @returns A structure containing the matrices L and P. The upper triangular
+ * matrix is stored in the argument passed to the function.
+ */
 matrix_lup_t* matrix_lupp(matrix_t* U);
+/**
+ * @brief Swaps the rows @p k and @p l in the matrix @p A.
+ */
 void matrix_row_swap(matrix_t* A, uint64_t k, uint64_t l);
+/** 
+ * @brief Prints a compact representation of the matrix to stdout.
+ */
 void matrix_print(matrix_t* A);
 matrix_qr_t* matrix_reduced_qr(matrix_t* A);
+/**
+ * @brief Creates a new matrix equal to the transpose of @p A.
+ *
+ * The transpose of an \f$ m \times n \f$ matrix is an \f$ n \times m \f$
+ * matrix where \f$ a_{ij} = b_{ji} \f$ where \f$ b_{ij} \f$ are the elements
+ * of the transpose matrix.
+ */
 matrix_t* matrix_transpose(matrix_t* A);
+/**
+ * @brief Frees the memory used by the matrix @p A.
+ *
+ * This function frees the array of doubles used to store the elements
+ * of the matrix and then frees the matrix structure itself.
+ */
 void matrix_destroy(matrix_t* A);
+/** 
+ * @brief Finds a vector x minimising the function 
+ * \f$\frac12 \lVert Ax - b \rVert^2\f$.
+ *
+ * This function can be used to obtain a minimiser of the function \f$g(x) =
+ * \frac12 \lVert Ax - b \rVert^2\f$ given an \f$m \times n\f$ matrix @p A
+ * and a \f$m \times 1\f$ matrix @p b. These problems are known as <b>least
+ * squares problems</b>.
+ * 
+ * Internally, this function calculates the reduced QR factorisation of @p A
+ * and then solves the system using backward substitution.
+ *
+ * @warning We require @p A to be of full rank or else the solution is not
+ * uniquely determined to the least squares problem. 
+ */
 matrix_t* matrix_lsq(matrix_t* A, matrix_t* b);
+/**
+ * @brief Iteratively solves the system \f$Ax = b\f$ where @p A satisfies 
+ * certain convergence criteria.
+ *
+ * In contrast to <tt>matrix_ge</tt> and related functions, this is an 
+ * iterative solver to find the solution to a system of linear equations.
+ *
+ * As this is an iterative solver, a tolerance @p tol must be passed which
+ * sets when to stop: when the residual \f$\lVert Ax - b \rVert \f$ is less 
+ * than @p tol, we terminate.
+ *
+ * This function will never iterate more than MAX_ITER times as defined in 
+ * <tt>matrix.c</tt> to prevent infinite looping if the process does not 
+ * converge.
+ *
+ * @returns The 2-norm of the residual \f$Ax - b\f$ for the vector @p x which
+ * stores the solution found.
+ *
+ * @warning The iterative method will only converge if certain criteria are
+ * satisified by @p A. If these are not satisfied, the iterations may never
+ * converge to the true value. The following are sufficient conditions for the
+ * convergence of the Jacobi method:
+ * - the 'strong row sum' criterion, 
+ *   \f$|a_{ii}| > \sum_{j \neq i} |a_{ij}|\f$ for all \f$i\f$
+ * - the 'strong column sum' criterion, formulated analogously to above,
+ * - irreducibility and the 'weak row sum' criterion
+ * \f$|a_{ii}| \geq \sum_{j \neq i} |a_{ij}| for all i, and
+ * \f$|a_{kk}| > \sum_{j \neq k} |a_{kj}| for some row k.
+ */
 double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol);
 
