@@ -22,6 +22,8 @@ use the library.
 The following example demonstrates how to use the library to solve a system Ax = b using the 
 Gaussian elimination algorithm. This is suitable for any invertible matrix A. 
 ```c
+#include <stdio.h>
+#include <stdlib.h>
 #include "matrix.h"
 int main(void) {
     // Create a 3 x 3 identity matrix.
@@ -42,6 +44,7 @@ int main(void) {
     matrix_destroy(A);
     matrix_destroy(x);
     matrix_destroy(b);
+    return EXIT_SUCCESS;
 }
 ```
 
