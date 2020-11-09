@@ -1,8 +1,15 @@
 CC=clang
-CFLAGS=-lm -Wall -Wpedantic -pg -O3 -ferror-limit=1
+LDFLAGS=-lm
+CFLAGS=-Wall -Wpedantic -O3 -ferror-limit=1
+SRC = $(wildcard *.c)
+OBJECTS = $(SRC:.c=.o)
 
-.c.o:
-	$(CC) -c -o $@ $< $(CFLAGS)
+%o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-all: matrix.o main.o
-	$(CC) $(CFLAGS) main.o matrix.o
+main: $(OBJECTS)
+	$(CC) $(LDFLAGS) $(CFLAGS) $(OBJECTS) -o $@
+all: main;
+
+clean:
+	rm -rf $(OBJECTS) ./a.out

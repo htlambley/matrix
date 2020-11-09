@@ -13,6 +13,15 @@ bool approx_equal(double x, double y, double eps) {
     return fabs(x - y) < eps;
 }
 
+extern double matrix_get(matrix_t* A, uint64_t i, uint64_t j);
+extern void matrix_set(matrix_t* A, uint64_t i, uint64_t j, double value);
+
+/**
+ * @brief A floating point approximation to the signum function, which is
+ * 1 if x > 0, 0 if x == 0, and -1 if x < 0.
+ *
+ * @returns The signum of the parameter @p x, either 1.0, 0.0, or -1.0.
+ */
 double sgn(double x) {
     if (x >= EPSILON) {
 	return 1.0;
@@ -23,15 +32,6 @@ double sgn(double x) {
     }
 }
 
-__attribute__((always_inline))
-static inline double matrix_get(struct matrix* m, uint64_t i, uint64_t j) {
-    return m->A[i * m->n + j]; 
-}
-
-__attribute__((always_inline))
-static inline void matrix_set(struct matrix* m, uint64_t i, uint64_t j, double value) {
-    m->A[i * m->n + j] = value;
-}
 
 bool matrix_upper_triangular(matrix_t* A) {
     if (A->m != A->n) {
@@ -82,13 +82,6 @@ bool matrix_diagonal(matrix_t* A) {
     return true;
 }
 
-/*
- * Performs forward substitution on a lower triangular matrix A to
- * solve the equation Ax = b for x.
- * Takes an n x n lower triangular matrix A and a n x 1 vector b.
- * You must check that A is lower triangular yourself: for example,
- * use matrix_lower_triangular(A).
- */
 matrix_t* matrix_fs(matrix_t* A, matrix_t* b) {
     matrix_t* x = matrix_create(A->n, 1);
     for (uint64_t i = 0; i < A->n; i++) {
@@ -103,10 +96,6 @@ matrix_t* matrix_fs(matrix_t* A, matrix_t* b) {
     return x;
 }
 
-/* 
- * Performs backward substitution on an upper triangular matrix A. 
- * See matrix_fs.
- */
 matrix_t* matrix_bs(matrix_t* A, matrix_t* b) {
     matrix_t* x = matrix_create(A->n, 1);
     for (uint64_t i = A->n; i > 0; i--) {
@@ -122,13 +111,6 @@ matrix_t* matrix_bs(matrix_t* A, matrix_t* b) {
     return x;
 }
 
-/* Solves a linear system Ax = b for any square matrix A
- * by Gaussian elimination (without pivoting).
- * 
- * Takes an n x n matrix A and a n x 1 vector b.
- * Consumes the matrix A (so do not use A after this).
- * Returns an n x 1 vector x satisfiying Ax = b.
- */
 matrix_t* matrix_ge(matrix_t* A, matrix_t* b) {
     matrix_t* L = matrix_lu(A); 
     // Solve Ly = b.
@@ -149,10 +131,6 @@ matrix_t* matrix_gepp(matrix_t* A, matrix_t* b) {
     return x;
 }
 
-/*
- * Allocates an m x n matrix and returns a pointer to it.
- * Each element is guaranteed to be zero.
- */
 matrix_t* matrix_create(uint64_t m, uint64_t n) {
     double* A = calloc(m * n, sizeof(double));
     struct matrix *mat = (struct matrix*)malloc(sizeof(struct matrix));
@@ -179,9 +157,6 @@ void matrix_destroy(matrix_t* A) {
 }
 
 
-/*
- * Adds two matrices, storing the value in the first matrix.
- */
 void matrix_add(struct matrix* A, struct matrix* B) {
     assert(A->m == B->m && A->n == B->n);
     for (uint64_t i = 0; i < A->m; i++) {
@@ -192,7 +167,6 @@ void matrix_add(struct matrix* A, struct matrix* B) {
     }
 }
 
-// Creates the matrix I_n.
 struct matrix* matrix_id(uint64_t n) {
     struct matrix* A = matrix_create(n, n);
     for (uint64_t i = 0; i < A->m; i++) {
@@ -201,10 +175,6 @@ struct matrix* matrix_id(uint64_t n) {
     return A;
 }
 
-/* 
- * Computes the matrix product AB, storing the result in a new matrix of 
- * the appropriate dimension.
- */
 matrix_t* matrix_mul(matrix_t* A, matrix_t* B) {
     assert(A->n == B->m);
     matrix_t* C = matrix_create(A->m, B->n);
@@ -220,16 +190,6 @@ matrix_t* matrix_mul(matrix_t* A, matrix_t* B) {
     return C;
 }
 
-/*
- * Computes the LU decomposition of a matrix. An LU decomposition is a 
- * factorisation of a matrix A into a unit lower triangular matrix L
- * and an upper triangular matrix U such that A = LU.
- *
- * This function takes the given matrix and returns the matrix L. The given
- * matrix will be altered in place to give U.
- *
- * The given matrix must be square.
- */
 matrix_t* matrix_lu(matrix_t* U) {
     assert(U->m == U->n);
     matrix_t* L = matrix_id(U->m);
@@ -284,6 +244,8 @@ matrix_lup_t* matrix_lupp(matrix_t* U) {
 	matrix_row_swap_partial(U, max_i, j, j, U->n);
 	matrix_row_swap_partial(L, max_i, j, 0, j);
 	matrix_row_swap(P, max_i, j);
+	// Perform the "clearing across" step where we must set
+        // u_ik = u_ik - l_ij u_jk for each i > j.
 	for (uint64_t i = j + 1; i < U->m; i++) {
 	    double l_ij = matrix_get(U, i, j) / matrix_get(U, j, j);
 	    matrix_set(L, i, j, l_ij);
@@ -311,10 +273,6 @@ void matrix_print(matrix_t* A) {
     }
 }
 
-/* Computes the Hadamard product (the elementwise product 
- * of two matrices) of A and B.
- * The result is stored in A.
- */
 void matrix_hadamard(matrix_t* A, matrix_t* B) {
     assert(A->m == B->m && A->n == B->n);
     for (uint64_t i = 0; i < A->m; i++) {
@@ -379,16 +337,6 @@ void matrix_set_col(matrix_t* A, uint64_t j, matrix_t* col) {
     } 
 }
 
-/* Computes the reduced QR factorisation of an m x n
- * matrix A. 
- * This is a decomposition A = QR, where Q is an m x n
- * orthogonal matrix and R is an upper triangular n x n
- * matrix.
- * We require m >= n for this factorisation to exist.
- * Returns a matrix_qr_t containing members Q and R
- * which are newly allocated matrices of the two
- * required forms.
- */
 matrix_qr_t* matrix_reduced_qr(matrix_t* A) {
     assert(A->m >= A->n);
     matrix_t* Q = matrix_create(A->m, A->n);
@@ -429,7 +377,6 @@ matrix_qr_t* matrix_reduced_qr(matrix_t* A) {
     return ret;
 }
 
-// TODO: document in header.
 matrix_t* matrix_basis_vector(uint64_t n, uint64_t i) {
     assert(i < n);
     matrix_t* e_i = matrix_create(n, 1);
@@ -437,7 +384,6 @@ matrix_t* matrix_basis_vector(uint64_t n, uint64_t i) {
     return e_i;
 }
 
-// TODO: document
 matrix_t* matrix_householder(matrix_t* v) {
     assert(v->n == 1);
     matrix_t* H = matrix_id(v->m);
@@ -467,7 +413,7 @@ matrix_qr_t* matrix_qr_hh(matrix_t* A) {
 	matrix_t* H = matrix_householder(v);
 	matrix_destroy(u);
 	matrix_destroy(v);
-	// Construct block matrix Q = [ I 0 ; 0 H];
+	// Construct block matrix Q = [ I 0 ; 0 H ];
 	matrix_t* Q_k = matrix_id(A->m);
 	for (uint64_t i = k; i < A->m; i++) {
 	    for(uint64_t j = k; j < A->m; j++) {
@@ -519,14 +465,6 @@ matrix_t* matrix_lsq(matrix_t* A, matrix_t* b) {
 }
 
 
-/* Solves the system Ax = b, where A is an n x n matrix and
- * b is an n-dimensional vector using the iterative Jacobi method,
- * terminating when the residual error is less than the tolerance tol.
- * Returns the residual error, and the solution is stored in x.
- * An initial guess x_0 is required at the solution which will be 
- * iterated upon.
- * The matrix A will be altered in the process.
- */
 double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol) {
     assert(A->m == A->n);
     matrix_t* D_inv = matrix_create(A->m, A->n);

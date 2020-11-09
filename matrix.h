@@ -45,6 +45,28 @@ typedef struct matrix_lup matrix_lup_t;
 typedef struct matrix_qr matrix_qr_t;
 
 /**
+ * @brief Accesses the element (@p i, @p j) from the matrix @p A,
+ * where @p i accesses the (i + 1)th row and @p j accesses the (j + 1)th
+ * column.
+ * 
+ * @warning In contrast to the mathematical notation \f$a_{11}\f$ as the
+ * first element of the matrix, we denote the top left element by the index
+ * (0, 0), and the bottom right by (m - 1, n - 1) in an m x n matrix. 
+ */
+__attribute__((always_inline))
+inline double matrix_get(struct matrix* m, uint64_t i, uint64_t j) {
+    return m->A[i * m->n + j]; 
+}
+
+/**
+ * @brief Sets the element (@p i, @p j) in the matrix @p A to @p value.
+ */
+__attribute__((always_inline))
+inline void matrix_set(struct matrix* m, uint64_t i, uint64_t j, double value) {
+    m->A[i * m->n + j] = value;
+}
+
+/**
  * @brief Tests whether a matrix @p A is lower triangular. 
  */
 bool matrix_lower_triangular(matrix_t* A); 
@@ -135,20 +157,6 @@ matrix_t* matrix_gepp(matrix_t* A, matrix_t* b);
  * <tt>matrix_destroy</tt> in order to free the memory used by the matrix.
  */
 matrix_t* matrix_create(uint64_t m, uint64_t n);
-/**
- * @brief Accesses the element (@p i, @p j) from the matrix @p A,
- * where @p i accesses the (i + 1)th row and @p j accesses the (j + 1)th
- * column.
- * 
- * @warning In contrast to the mathematical notation \f$a_{11}\f$ as the
- * first element of the matrix, we denote the top left element by the index
- * (0, 0), and the bottom right by (m - 1, n - 1) in an m x n matrix. 
- */
-static inline double matrix_get(matrix_t* A, uint64_t i, uint64_t j);
-/**
- * @brief Sets the element (@p i, @p j) in the matrix @p A to @p value.
- */
-static inline void matrix_set(matrix_t* A, uint64_t i, uint64_t j, double value);
 /**
  * @brief Adds the matrices @p A and @p B, storing the result in the matrix
  * @p A. 
@@ -309,4 +317,15 @@ matrix_t* matrix_lsq(matrix_t* A, matrix_t* b);
  */
 double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol);
 
+/**
+ * @brief Creates a new matrix representing the basis vector e_i (for a given
+ * @p i) in dimension n.
+ *
+ * In other words, this constructs an n x 1 column vector with row @p i 
+ * containing a 1 and all other rows containing a 0.
+ *
+ * @returns A newly allocated matrix of dimension n x 1 equal to the basis
+ * vector e_i.
+ */
+matrix_t* matrix_basis_vector(uint64_t n, uint64_t i);
 
