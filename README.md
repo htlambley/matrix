@@ -6,12 +6,17 @@ A C library for basic matrix algebra including:
 - **Solvers for least squares problems**: using QR factorisation.
 
 ## Compilation
-Compile using `make`:
+Compile using `make`, and if desired, install the library to your system (root may be required):
 ```
-make all
+make package
+cp libmatrix.a /usr/local/lib/libmatrix.a
+cp matrix.h /usr/local/include/matrix.h
 ```
 In order to compile, `gcc` and `make` are required. These should be easily obtained using your 
 computer's package manager.
+
+If the library has been installed as above, compile your program with `-lmatrix` in order to
+use the library.
 
 ## Usage
 The following example demonstrates how to use the library to solve a system Ax = b using the 
@@ -39,3 +44,4 @@ int main(void) {
     matrix_destroy(b);
 }
 ```
+
