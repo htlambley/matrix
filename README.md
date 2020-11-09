@@ -7,7 +7,7 @@ A C library for basic matrix algebra including:
 
 ## Compilation
 Compile using `make`, and if desired, install the library to your system (root may be required):
-```
+```shell
 make package
 cp libmatrix.a /usr/local/lib/libmatrix.a
 cp matrix.h /usr/local/include/matrix.h
@@ -21,7 +21,7 @@ use the library.
 ## Usage
 The following example demonstrates how to use the library to solve a system Ax = b using the 
 Gaussian elimination algorithm. This is suitable for any invertible matrix A. 
-```
+```c
 #include "matrix.h"
 int main(void) {
     // Create a 3 x 3 identity matrix.
