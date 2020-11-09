@@ -328,4 +328,11 @@ double matrix_jacobi(matrix_t* A, matrix_t* b, matrix_t** x, double tol);
  * vector e_i.
  */
 matrix_t* matrix_basis_vector(uint64_t n, uint64_t i);
-
+/**
+ * @brief Calculate the Frobenius norm of the given matrix @p A.
+ * 
+ * The Frobenius norm is given by summing the square of each element, then
+ * taking the square root. It is equivalent to considering the matrix as a 
+ * vector of dimension m x n and calculating the vector 2-norm.
+ */
+double matrix_norm_frob(matrix_t* A);
