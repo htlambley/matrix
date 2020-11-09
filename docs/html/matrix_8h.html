@@ -68,7 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">matrix.h File Reference</div>  </div>
 </div><!--header-->
@@ -112,6 +113,9 @@ typedef struct <a class="el" href="structmatrix__qr.html">matrix_qr</a>&#160;</t
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa5901b34e2c1011521bc6cbc289c4702"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#aa5901b34e2c1011521bc6cbc289c4702">__attribute__</a> ((always_inline)) inline double matrix_get(struct <a class="el" href="structmatrix.html">matrix</a> *m</td></tr>
+<tr class="memdesc:aa5901b34e2c1011521bc6cbc289c4702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the element (<code>i</code>, <code>j</code>) from the matrix <code>A</code>, where <code>i</code> accesses the (i + 1)th row and <code>j</code> accesses the (j + 1)th column.  <a href="#aa5901b34e2c1011521bc6cbc289c4702">More...</a><br /></td></tr>
+<tr class="separator:aa5901b34e2c1011521bc6cbc289c4702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3808b63ae2c6a59bc7e5661f4cafd2ed"><td class="memItemLeft" align="right" valign="top"><a id="a3808b63ae2c6a59bc7e5661f4cafd2ed"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a3808b63ae2c6a59bc7e5661f4cafd2ed">matrix_lower_triangular</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A)</td></tr>
 <tr class="memdesc:a3808b63ae2c6a59bc7e5661f4cafd2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a matrix <code>A</code> is lower triangular. <br /></td></tr>
@@ -184,10 +188,45 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <tr class="memitem:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a7ae8ac488523c525ecb0c4587c8ca9ba">matrix_jacobi</a> (<a class="el" href="structmatrix.html">matrix_t</a> *A, <a class="el" href="structmatrix.html">matrix_t</a> *b, <a class="el" href="structmatrix.html">matrix_t</a> **x, double tol)</td></tr>
 <tr class="memdesc:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively solves the system \(Ax = b\) where <code>A</code> satisfies certain convergence criteria.  <a href="#a7ae8ac488523c525ecb0c4587c8ca9ba">More...</a><br /></td></tr>
 <tr class="separator:a7ae8ac488523c525ecb0c4587c8ca9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6298e1ff664f5e865f243ad6ae712f68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix.html">matrix_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8h.html#a6298e1ff664f5e865f243ad6ae712f68">matrix_basis_vector</a> (uint64_t n, uint64_t i)</td></tr>
+<tr class="memdesc:a6298e1ff664f5e865f243ad6ae712f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new matrix representing the basis vector e_i (for a given <code>i</code>) in dimension n.  <a href="#a6298e1ff664f5e865f243ad6ae712f68">More...</a><br /></td></tr>
+<tr class="separator:a6298e1ff664f5e865f243ad6ae712f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a717c50cfde3924051c279a89096afd3d"><td class="memItemLeft" align="right" valign="top"><a id="a717c50cfde3924051c279a89096afd3d"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>i</b></td></tr>
+<tr class="separator:a717c50cfde3924051c279a89096afd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8144072ce5b4a52813ea2851562c4b2"><td class="memItemLeft" align="right" valign="top">uint64_t uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>j</b></td></tr>
+<tr class="separator:ab8144072ce5b4a52813ea2851562c4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed274ba33b28facb9df93fc44dc66df"><td class="memItemLeft" align="right" valign="top">uint64_t uint64_t double&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+<tr class="separator:a5ed274ba33b28facb9df93fc44dc66df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Matrix creation, algebra and decompositions. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="aa5901b34e2c1011521bc6cbc289c4702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5901b34e2c1011521bc6cbc289c4702">&#9670;&nbsp;</a></span>__attribute__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(always_inline)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accesses the element (<code>i</code>, <code>j</code>) from the matrix <code>A</code>, where <code>i</code> accesses the (i + 1)th row and <code>j</code> accesses the (j + 1)th column. </p>
+<p>Sets the element (<code>i</code>, <code>j</code>) in the matrix <code>A</code> to <code>value</code>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>In contrast to the mathematical notation \(a_{11}\) as the first element of the matrix, we denote the top left element by the index (0, 0), and the bottom right by (m - 1, n - 1) in an m x n matrix. </dd></dl>
+
+</div>
+</div>
 <a id="ac1e78a42d62d2ee921d861b2bb932a7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac1e78a42d62d2ee921d861b2bb932a7c">&#9670;&nbsp;</a></span>matrix_add()</h2>
 
@@ -216,6 +255,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 
 <p>Adds the matrices <code>A</code> and <code>B</code>, storing the result in the matrix <code>A</code>. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Note carefully that this will overwrite what is stored in the matrix <code>A</code>, and leave <code>B</code> unchanged. This is to avoid allocating another matrix unnecessarily. If you need to keep the original <code>A</code>, allocate a copy using <code>matrix_clone</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a6298e1ff664f5e865f243ad6ae712f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6298e1ff664f5e865f243ad6ae712f68">&#9670;&nbsp;</a></span>matrix_basis_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix.html">matrix_t</a>* matrix_basis_vector </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new matrix representing the basis vector e_i (for a given <code>i</code>) in dimension n. </p>
+<p>In other words, this constructs an n x 1 column vector with row <code>i</code> containing a 1 and all other rows containing a 0.</p>
+<dl class="section return"><dt>Returns</dt><dd>A newly allocated matrix of dimension n x 1 equal to the basis vector e_i. </dd></dl>
 
 </div>
 </div>
@@ -645,6 +716,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matr
 <p>Creates a new matrix equal to the transpose of <code>A</code>. </p>
 <p>The transpose of an \( m \times n \) matrix is an \( n \times m \) matrix where \( a_{ij} = b_{ji} \) where \( b_{ij} \) are the elements of the transpose matrix. </p>
 
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ab8144072ce5b4a52813ea2851562c4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8144072ce5b4a52813ea2851562c4b2">&#9670;&nbsp;</a></span>j</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t uint64_t j</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    <span class="keywordflow">return</span> m-&gt;A[i * m-&gt;n + j]</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a5ed274ba33b28facb9df93fc44dc66df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed274ba33b28facb9df93fc44dc66df">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t uint64_t double value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    m-&gt;A[i * m-&gt;n + j] = value</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['m',['m',['../structmatrix.html#a1522165deae322bee3ee78a45f031426',1,'matrix']]],
-  ['matrix',['matrix',['../structmatrix.html',1,'']]],
-  ['matrix_2eh',['matrix.h',['../matrix_8h.html',1,'']]],
   ['matrix_5fadd',['matrix_add',['../matrix_8h.html#ac1e78a42d62d2ee921d861b2bb932a7c',1,'matrix.c']]],
   ['matrix_5fbasis_5fvector',['matrix_basis_vector',['../matrix_8h.html#a6298e1ff664f5e865f243ad6ae712f68',1,'matrix.c']]],
   ['matrix_5fbs',['matrix_bs',['../matrix_8h.html#a7105309534bc7d6560bd5de5d739b686',1,'matrix.c']]],
@@ -18,15 +15,12 @@ var searchData=
   ['matrix_5flower_5ftriangular',['matrix_lower_triangular',['../matrix_8h.html#a3808b63ae2c6a59bc7e5661f4cafd2ed',1,'matrix.c']]],
   ['matrix_5flsq',['matrix_lsq',['../matrix_8h.html#a76d3cc678126c9e254c3f2292eea9937',1,'matrix.c']]],
   ['matrix_5flu',['matrix_lu',['../matrix_8h.html#a681fe0383775d33134e7d1f9455ba3bb',1,'matrix.c']]],
-  ['matrix_5flup',['matrix_lup',['../structmatrix__lup.html',1,'']]],
   ['matrix_5flupp',['matrix_lupp',['../matrix_8h.html#aac9651131ce6bace790b4eb79f715817',1,'matrix.c']]],
   ['matrix_5fmul',['matrix_mul',['../matrix_8h.html#a71c77b30fb0aa235b17a6137ca9a22aa',1,'matrix.c']]],
   ['matrix_5fprint',['matrix_print',['../matrix_8h.html#aed67f2e946d13d5e269a04e5afeedf6e',1,'matrix.c']]],
-  ['matrix_5fqr',['matrix_qr',['../structmatrix__qr.html',1,'']]],
   ['matrix_5fqr_5fhh',['matrix_qr_hh',['../matrix_8h.html#aa197f495ecc0e2d320ba991ffddceb63',1,'matrix.c']]],
   ['matrix_5freduced_5fqr',['matrix_reduced_qr',['../matrix_8h.html#a7c8c4c18622b1c99a18a5082c699b94d',1,'matrix.c']]],
   ['matrix_5frow_5fswap',['matrix_row_swap',['../matrix_8h.html#a003fc17a8108fa2fef2b41567305a581',1,'matrix.c']]],
   ['matrix_5ftranspose',['matrix_transpose',['../matrix_8h.html#ad7b763efbb57ab953f9e4b6ed8c9bd90',1,'matrix.c']]],
-  ['matrix_5fupper_5ftriangular',['matrix_upper_triangular',['../matrix_8h.html#a8098e0ff84c96b488ad54afba67d13c1',1,'matrix.c']]],
-  ['matrix_20computation_20library',['Matrix computation library',['../md_README.html',1,'']]]
+  ['matrix_5fupper_5ftriangular',['matrix_upper_triangular',['../matrix_8h.html#a8098e0ff84c96b488ad54afba67d13c1',1,'matrix.c']]]
 ];
